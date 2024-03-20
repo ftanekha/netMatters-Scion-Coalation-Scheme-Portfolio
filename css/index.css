@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0px;
+  text-decoration: none;
+  color: rgb(51, 54, 69);
+}
+
+body {
+  width: 100%;
+  background-color: #fbfcfa;
+  padding: 1rem 0;
+  font-family: "Spline Sans Mono", monospace;
+  font-font-optical-sizing: auto;
+  font-font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0.25px;
+}
+
+div#main-container {
+  min-width: 280px;
+  width: 80%;
+  padding: 1rem;
+}
+div#main-container div#main-links {
+  display: flex;
+  flex-direction: column;
+}
+div#main-container div#main-links a.main-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+div#main-container div#main-links a.main-link span {
+  padding: 0.5rem;
+}
+div#main-container div#main-links a.main-link span:hover {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: rgb(30, 26, 26) 0.5px 1px 2px;
+}
+div#main-container div#main-links div#greetings {
+  width: 80%;
+  margin: 1px auto 2rem;
+  padding: 1rem;
+  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+}
+div#main-container div#main-links div#greetings strong, div#main-container div#main-links div#greetings em {
+  display: block;
+  font-style: normal;
+}
+div#main-container div#main-links div#greetings * {
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */
