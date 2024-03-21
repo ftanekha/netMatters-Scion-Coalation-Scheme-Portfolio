@@ -46,19 +46,51 @@ div#main-container div#main-links a.main-link span:hover {
   font-size: 1.5rem;
   text-shadow: rgb(30, 26, 26) 0.5px 1px 1px;
 }
-div#main-container div#main-links div#greetings {
+div#main-container div#main-links div#about-me {
   width: 80%;
   margin: 1px auto 2rem;
   padding: 1rem;
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  border-radius: 10px;
 }
-div#main-container div#main-links div#greetings strong, div#main-container div#main-links div#greetings em {
-  display: block;
-  font-style: normal;
-}
-div#main-container div#main-links div#greetings * {
+div#main-container div#main-links div#about-me * {
   font-size: 0.85rem;
   text-align: center;
+}
+div#main-container div#main-links div#about-me strong, div#main-container div#main-links div#about-me em {
+  display: block;
+  margin: 1rem;
+  padding: 0.2rem;
+  font-style: normal;
+  font-weight: 600;
+}
+div#main-container div#main-links div#about-me strong {
+  border-radius: 10px;
+  box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
+}
+div#main-container div#main-links div#about-me em {
+  text-shadow: red 0px 0.15px;
+}
+div#main-container div#main-links div#about-me span.waving-hand {
+  display: inline-block;
+  animation: wave 3s;
+}
+div#main-container div#main-links div#portfolio {
+  width: 80%;
+  margin: 1px auto 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+div#main-container div#main-links div#portfolio a {
+  display: block;
+  padding: 1rem;
+}
+div#main-container div#main-links div#portfolio a img {
+  width: 200px;
+  padding: 1rem;
+  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  border-radius: 10px;
 }
 div#main-container div#certification-links {
   padding: 2rem 0;
@@ -73,15 +105,34 @@ div#main-container div#media-links a {
   display: block;
   text-align: center;
   width: 25%;
+  opacity: 65%;
 }
-div#main-container div#media-links a:nth-child(2) img {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-}
-div#main-container div#media-links a:nth-child(2) img:hover {
-  border: ridge rgb(30, 26, 26) 0.5rem;
-  transform: scale(1.25);
+
+@keyframes wave {
+  0% {
+    transform: rotate(100deg);
+  }
+  10% {
+    transform: scale(2);
+  }
+  30% {
+    transform: rotate(60deg);
+  }
+  45% {
+    transform: scale(1);
+  }
+  55% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(40deg);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
