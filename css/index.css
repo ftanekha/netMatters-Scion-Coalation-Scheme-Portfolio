@@ -1,24 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0px;
-  text-decoration: none;
-  color: rgb(51, 54, 69);
-}
-
-body {
-  width: 100%;
-  background-color: #fbfcfa;
-  padding: 1rem 0;
-  font-family: "Spline Sans Mono", monospace;
-  font-font-optical-sizing: auto;
-  font-font-weight: 300;
-  font-size: 16px;
-  letter-spacing: 0.25px;
-}
-
 div#main-container {
   min-width: 280px;
   width: 80%;
@@ -119,7 +100,7 @@ div#main-container main#main-links section#portfolio a figure figcaption {
   border-radius: 0.5rem;
 }
 div#main-container main#main-links section#portfolio a figure figcaption:hover {
-  transform: scale(2);
+  transform: scale(1.5);
   padding: 0.5rem;
   background-color: rgb(30, 26, 26);
   border-radius: 0.5rem;
@@ -129,6 +110,8 @@ div#main-container main#main-links section#portfolio a figure figcaption:hover {
 div#main-container main#main-links section#code-examples {
   display: flex;
   flex-direction: column;
+  background-color: rgb(248, 116, 49);
+  position: relative;
 }
 div#main-container main#main-links section#code-examples img, div#main-container main#main-links section#code-examples audio {
   display: block;
@@ -141,20 +124,44 @@ div#main-container main#main-links section#code-examples img {
 div#main-container main#main-links section#code-examples audio {
   height: 1rem;
 }
-div#main-container section#certification-links {
-  padding: 2rem 0;
+div#main-container main#main-links section#code-examples span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.1rem;
+  background-color: black;
 }
-div#main-container section#media-links {
-  flex-shrink: 0;
+div#main-container section#certification-links {
   display: flex;
   min-width: 160px;
   margin: auto;
+  display: flex;
+  min-width: 160px;
+  margin: auto;
+}
+div#main-container section#certification-links a {
+  display: block;
+  text-align: center;
+  width: 25%;
+}
+div#main-container section#certification-links a img {
+  width: 1rem;
+  height: 1rem;
+}
+div#main-container section#media-links {
+  display: flex;
+  min-width: 160px;
+  margin: auto;
+  flex-shrink: 0;
 }
 div#main-container section#media-links a {
   display: block;
   text-align: center;
   width: 25%;
-  opacity: 65%;
+}
+div#main-container section#media-links a img {
+  width: 1rem;
+  height: 1rem;
 }
 
 @keyframes wave {
@@ -182,6 +189,24 @@ div#main-container section#media-links a {
   100% {
     transform: rotate(0deg);
   }
+}
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0px;
+  text-decoration: none;
+  color: rgb(51, 54, 69);
+}
+
+body {
+  width: 100%;
+  background-color: #fbfcfa;
+  padding: 1rem 0;
+  font-family: "Spline Sans Mono", monospace;
+  font-font-optical-sizing: auto;
+  font-font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.25px;
 }
 
 /*# sourceMappingURL=index.css.map */

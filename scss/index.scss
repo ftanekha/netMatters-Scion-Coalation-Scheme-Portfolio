@@ -1,6 +1,12 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+//partials
+@import 
+    "variables/index",
+    "mixins/index", 
+    "partials/index"
+;
 // color palete
 //***netmatters
 // grey: rgb(102, 102, 102);
@@ -28,6 +34,3 @@ body{
     }
     letter-spacing: .25px;
 }
-
-// media queries
-@import "partials/index";

@@ -104,15 +104,12 @@
                                 border-bottom: solid rgb(30, 26, 26) 1px;
                                 border-radius: .5rem;
                                 &:hover{
-                                    transform: scale(2);
+                                    transform: scale(1.5);
                                     padding: .5rem;
                                     background-color: rgb(30, 26, 26);
                                     border-radius: .5rem;
                                     font-size: .5rem;
                                     color: white;
-                                }
-                                span.construction-cone{
-                                    
                                 }
                             }
                         }
@@ -122,6 +119,9 @@
                 &#code-examples{
                     display: flex;
                     flex-direction: column;
+                    // construction orange
+                    background-color: rgb(248, 116, 49);
+                    position: relative;
                     img, audio{
                         display: block;
                         width: 200px;
@@ -133,26 +133,27 @@
                     audio{
                         height: 1rem;
                     }
+                    span{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: .1rem;
+                        background-color: black;
+                    }
                 }
             }
         }
         section#certification-links{
-            padding: 2rem 0;
-            // background-color: blue;
-        }
-        section#media-links{
-            //stifky footer effect
-            flex-shrink: 0;
-            //
             display: flex;
             min-width: 160px;
             margin: auto;
-            a{
-                display: block;
-                text-align: center;
-                width: 25%;
-                opacity: 65%;
-            }
+            @include sm-icon;
+            
+        }
+        section#media-links{
+            @include sm-icon;
+            //stifky footer effect
+            flex-shrink: 0;
         }
     }
 // }
