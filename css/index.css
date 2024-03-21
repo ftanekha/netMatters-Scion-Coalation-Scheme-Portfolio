@@ -26,12 +26,12 @@ div#main-container {
   display: flex;
   flex-direction: column;
 }
-div#main-container div#main-links {
+div#main-container main#main-links {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-div#main-container div#main-links a.main-link {
+div#main-container main#main-links a.main-link {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
@@ -39,58 +39,90 @@ div#main-container div#main-links a.main-link {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
 }
-div#main-container div#main-links a.main-link span {
+div#main-container main#main-links a.main-link span {
   padding: 0.5rem;
 }
-div#main-container div#main-links a.main-link span:hover {
+div#main-container main#main-links a.main-link span:hover {
   font-size: 1.5rem;
   text-shadow: rgb(30, 26, 26) 0.5px 1px 1px;
 }
-div#main-container div#main-links div#about-me {
+div#main-container main#main-links section#about-me {
   width: 80%;
   margin: 1px auto 2rem;
   padding: 1rem;
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 10px;
 }
-div#main-container div#main-links div#about-me * {
+div#main-container main#main-links section#about-me * {
   font-size: 0.85rem;
   text-align: center;
 }
-div#main-container div#main-links div#about-me strong, div#main-container div#main-links div#about-me em {
+div#main-container main#main-links section#about-me strong, div#main-container main#main-links section#about-me em {
   display: block;
   margin: 1rem;
   padding: 0.2rem;
   font-style: normal;
   font-weight: 600;
 }
-div#main-container div#main-links div#about-me strong {
+div#main-container main#main-links section#about-me strong {
   border-radius: 10px;
   box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
 }
-div#main-container div#main-links div#about-me em {
+div#main-container main#main-links section#about-me em {
   text-shadow: red 0px 0.15px;
 }
-div#main-container div#main-links div#about-me span.waving-hand {
+div#main-container main#main-links section#about-me span.waving-hand {
   display: inline-block;
   animation: wave 3s;
 }
-div#main-container div#main-links div#portfolio {
+div#main-container main#main-links section#about-me p {
+  text-align: center;
+  font-weight: 100;
+}
+div#main-container main#main-links section#about-me p:nth-of-type(3) {
+  line-height: 1.4rem;
+  font-weight: 300;
+  text-shadow: red 0px 0.05px;
+}
+div#main-container main#main-links section#portfolio {
   width: 80%;
   margin: 1px auto 2rem;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-div#main-container div#main-links div#portfolio a {
+div#main-container main#main-links section#portfolio a {
   display: block;
   padding: 1rem;
 }
-div#main-container div#main-links div#portfolio a img {
+div#main-container main#main-links section#portfolio a figure {
+  padding-bottom: 1rem;
+}
+div#main-container main#main-links section#portfolio a figure img {
   width: 200px;
   padding: 1rem;
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 10px;
+}
+div#main-container main#main-links section#portfolio a figure figcaption {
+  width: 200px;
+  margin: auto;
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.6rem;
+  font-weight: 300;
+  background-color: white;
+  text-shadow: red 0px 0.05px;
+  border-bottom: solid rgb(30, 26, 26) 1px;
+  border-radius: 0.5rem;
+}
+div#main-container main#main-links section#portfolio a figure figcaption:hover {
+  transform: scale(2);
+  padding: 0.5rem;
+  background-color: rgb(30, 26, 26);
+  border-radius: 0.5rem;
+  font-size: 0.5rem;
+  color: white;
 }
 div#main-container div#certification-links {
   padding: 2rem 0;
