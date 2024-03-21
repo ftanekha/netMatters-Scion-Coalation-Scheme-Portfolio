@@ -113,18 +113,41 @@ div#main-container main#main-links section#code-examples {
   background-color: rgb(248, 116, 49);
   position: relative;
 }
-div#main-container main#main-links section#code-examples img, div#main-container main#main-links section#code-examples audio {
-  display: block;
+div#main-container main#main-links section#code-examples *:not(span) {
   width: 200px;
   margin: auto;
 }
+div#main-container main#main-links section#code-examples div#problem-solution-selector * {
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 400;
+  padding: 0.3rem;
+}
+div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag {
+  display: inline-block;
+  width: 3rem;
+  text-align: center;
+  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  border-radius: 0.2rem;
+}
+div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag:hover {
+  background-color: rgb(30, 26, 26);
+}
+div#main-container main#main-links section#code-examples img, div#main-container main#main-links section#code-examples audio {
+  display: block;
+}
 div#main-container main#main-links section#code-examples img {
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 div#main-container main#main-links section#code-examples audio {
   height: 1rem;
 }
-div#main-container main#main-links section#code-examples span {
+div#main-container main#main-links section#code-examples span.construction-cone {
   position: absolute;
   top: 0;
   right: 0;

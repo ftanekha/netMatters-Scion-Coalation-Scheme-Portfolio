@@ -122,18 +122,44 @@
                     // construction orange
                     background-color: rgb(248, 116, 49);
                     position: relative;
-                    img, audio{
-                        display: block;
+                    //everything but span
+                    & *:not(span){
                         width: 200px;
                         margin: auto;
                     }
+                    div#problem-solution-selector{
+                        *{
+                            color: white;
+                            font-size: .6rem;
+                            font-weight: 400;
+                            padding: .3rem;
+                        }
+                        div#solutions-tags-container{
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: .25rem;
+                            span.tag{
+                                display: inline-block;
+                                width: 3rem;
+                                text-align: center;
+                                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                                border-radius: .2rem;
+                                &:hover{
+                                    background-color: rgb(30, 26, 26);
+                                }
+                            }
+                        }
+                    }
+                    img, audio{
+                        display: block;
+                    }
                     img{
-                        margin-bottom: 1rem;
+                        margin: 1rem;
                     }
                     audio{
                         height: 1rem;
                     }
-                    span{
+                    span.construction-cone{
                         position: absolute;
                         top: 0;
                         right: 0;
