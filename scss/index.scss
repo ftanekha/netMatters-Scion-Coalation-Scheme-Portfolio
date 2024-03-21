@@ -24,14 +24,10 @@ body{
         family: "Spline Sans Mono", monospace;
         font-optical-sizing: auto;
         font-weight: 300;
-        size: 20px;
+        size: 16px;
     }
     letter-spacing: .25px;
-    // font: {
-    //     // family: "Madimi One", sans-serif;
-    //     // weight: 400;
-    // }
 }
 
 // media queries
-@import "small-devices";
+@import "partials/index";
