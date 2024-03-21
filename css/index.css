@@ -46,10 +46,12 @@ div#main-container main#main-links a.main-link span:hover {
   font-size: 1.5rem;
   text-shadow: rgb(30, 26, 26) 0.5px 1px 1px;
 }
-div#main-container main#main-links section#about-me {
+div#main-container main#main-links section {
   width: 80%;
   margin: 1px auto 2rem;
   padding: 1rem;
+}
+div#main-container main#main-links section#about-me {
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 10px;
 }
@@ -124,16 +126,31 @@ div#main-container main#main-links section#portfolio a figure figcaption:hover {
   font-size: 0.5rem;
   color: white;
 }
-div#main-container div#certification-links {
+div#main-container main#main-links section#code-examples {
+  display: flex;
+  flex-direction: column;
+}
+div#main-container main#main-links section#code-examples img, div#main-container main#main-links section#code-examples audio {
+  display: block;
+  width: 200px;
+  margin: auto;
+}
+div#main-container main#main-links section#code-examples img {
+  margin-bottom: 1rem;
+}
+div#main-container main#main-links section#code-examples audio {
+  height: 1rem;
+}
+div#main-container section#certification-links {
   padding: 2rem 0;
 }
-div#main-container div#media-links {
+div#main-container section#media-links {
   flex-shrink: 0;
   display: flex;
   min-width: 160px;
   margin: auto;
 }
-div#main-container div#media-links a {
+div#main-container section#media-links a {
   display: block;
   text-align: center;
   width: 25%;

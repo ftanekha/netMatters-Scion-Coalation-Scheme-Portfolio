@@ -31,100 +31,116 @@
                     }
                 }   
             }
-            //about-me message, initially hidden?
-            section#about-me{
-                //repeat
+            section{
                 width: 80%;
                 margin: 1px auto 2rem;
                 padding: 1rem;
-                // end-repeat
-                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                border-radius: 10px;
-                *{
-                    font-size: .85rem;
-                    text-align: center;
-                }
-                strong, em{
-                    display: block;
-                    margin: 1rem;
-                    padding: .2rem;
-                    font-style: normal;
-                    font-weight: 600;
-                }
-                strong{
+                //about-me message, initially hidden?
+                &#about-me{
+                    // end-repeat
+                    box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
                     border-radius: 10px;
-                    box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
-                }
-                em{
-                    text-shadow: red 0px .15px;
-                }
-                span.waving-hand{
-                    display: inline-block;
-                    animation: wave 3s;
-                }
-                p{
-                    text-align: center;
-                    font-weight: 100;
-                    &:nth-of-type(3){
-                        line-height: 1.4rem;
-                        font-weight: 300;
-                        text-shadow: red 0px .05px;
+                    *{
+                        font-size: .85rem;
+                        text-align: center;
                     }
-                }
-            }
-            //div#portfolio
-            section#portfolio{
-                //repeat
-                width: 80%;
-                margin: 1px auto 2rem;
-                // end-repeat
-                display: flex;
-                flex-direction: column;
-                text-align: center;
-                a{
-                    display: block;
-                    padding: 1rem;
-                    figure{
-                        padding-bottom: 1rem;
-                        img{
-                            width: 200px;
-                            padding: 1rem;
-                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                            border-radius: 10px;
-                        }
-                        figcaption{
-                            width: 200px;
-                            margin: auto;
-                            padding: 1rem;
-                            text-align: left;
-                            font-size: .6rem;
+                    strong, em{
+                        display: block;
+                        margin: 1rem;
+                        padding: .2rem;
+                        font-style: normal;
+                        font-weight: 600;
+                    }
+                    strong{
+                        border-radius: 10px;
+                        box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
+                    }
+                    em{
+                        text-shadow: red 0px .15px;
+                    }
+                    span.waving-hand{
+                        display: inline-block;
+                        animation: wave 3s;
+                    }
+                    p{
+                        text-align: center;
+                        font-weight: 100;
+                        &:nth-of-type(3){
+                            line-height: 1.4rem;
                             font-weight: 300;
-                            background-color: white;
                             text-shadow: red 0px .05px;
-                            border-bottom: solid rgb(30, 26, 26) 1px;
-                            border-radius: .5rem;
-                            &:hover{
-                                transform: scale(2);
-                                padding: .5rem;
-                                background-color: rgb(30, 26, 26);
-                                border-radius: .5rem;
-                                font-size: .5rem;
-                                color: white;
+                        }
+                    }
+                }
+                //portfolio
+                &#portfolio{
+                    //repeat
+                    width: 80%;
+                    margin: 1px auto 2rem;
+                    // end-repeat
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    a{
+                        display: block;
+                        padding: 1rem;
+                        figure{
+                            padding-bottom: 1rem;
+                            img{
+                                width: 200px;
+                                padding: 1rem;
+                                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                                border-radius: 10px;
                             }
-                            span.construction-cone{
-                                
+                            figcaption{
+                                width: 200px;
+                                margin: auto;
+                                padding: 1rem;
+                                text-align: left;
+                                font-size: .6rem;
+                                font-weight: 300;
+                                background-color: white;
+                                text-shadow: red 0px .05px;
+                                border-bottom: solid rgb(30, 26, 26) 1px;
+                                border-radius: .5rem;
+                                &:hover{
+                                    transform: scale(2);
+                                    padding: .5rem;
+                                    background-color: rgb(30, 26, 26);
+                                    border-radius: .5rem;
+                                    font-size: .5rem;
+                                    color: white;
+                                }
+                                span.construction-cone{
+                                    
+                                }
                             }
                         }
                     }
                 }
+                //code-examples
+                &#code-examples{
+                    display: flex;
+                    flex-direction: column;
+                    img, audio{
+                        display: block;
+                        width: 200px;
+                        margin: auto;
+                    }
+                    img{
+                        margin-bottom: 1rem;
+                    }
+                    audio{
+                        height: 1rem;
+                    }
+                }
             }
-
         }
-        div#certification-links{
+        section#certification-links{
             padding: 2rem 0;
             // background-color: blue;
         }
-        div#media-links{
+        section#media-links{
             //stifky footer effect
             flex-shrink: 0;
             //
