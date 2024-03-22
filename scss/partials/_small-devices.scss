@@ -56,6 +56,25 @@
                             text-shadow: red 0px .05px;
                         }
                     }
+                    article#certification-links{
+                        margin: 3rem auto -1rem;
+                        display: flex;
+                        flex-direction: column;
+                        // @include sm-icon;
+                        p{
+                            font-size: 50%;
+                        }
+                        a{
+                            display: inline-block;
+                            text-align: center;
+                            padding: .5rem;
+                            // width: 25%;
+                            img{
+                                width: 1rem; 
+                                height: 1rem;
+                            }
+                        }
+                    }
                 }
                 //portfolio
                 &#portfolio{
@@ -198,7 +217,6 @@
                 }
             }
         }
-
         // FOOTER
         footer{
             a.main-link{
@@ -214,18 +232,31 @@
                         max-width: 280px;
                         color: black;
                     }
+                    button{
+                        padding: .25rem;
+                        background-color: green;
+                        color: white;
+                        border-radius: 3px;
+                        font: {
+                            variant: small-caps;
+                            weight: 700;
+                        }
+                        &:hover{
+                            background-color: lighten(green, 6%);
+                        }
+                    }
                 }
             }
         }
-        section#certification-links{
-            display: flex;
-            min-width: 160px;
-            margin: auto;
-            @include sm-icon;
-            
-        }
         section#media-links{
-            @include sm-icon;
+            margin: auto;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            div.sm-icons-container{
+                @include sm-icon;
+            }
             //stifky footer effect
             flex-shrink: 0;
         }

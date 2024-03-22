@@ -67,6 +67,23 @@ div#main-container main#main-links section#about-me p:nth-of-type(3) {
   font-weight: 300;
   text-shadow: red 0px 0.05px;
 }
+div#main-container main#main-links section#about-me article#certification-links {
+  margin: 3rem auto -1rem;
+  display: flex;
+  flex-direction: column;
+}
+div#main-container main#main-links section#about-me article#certification-links p {
+  font-size: 50%;
+}
+div#main-container main#main-links section#about-me article#certification-links a {
+  display: inline-block;
+  text-align: center;
+  padding: 0.5rem;
+}
+div#main-container main#main-links section#about-me article#certification-links a img {
+  width: 1rem;
+  height: 1rem;
+}
 div#main-container main#main-links section#portfolio {
   width: 80%;
   margin: 1px auto 2rem;
@@ -217,35 +234,36 @@ div#main-container footer section#enquiry-form form textarea {
   max-width: 280px;
   color: black;
 }
-div#main-container section#certification-links {
-  display: flex;
-  min-width: 160px;
-  margin: auto;
-  display: flex;
-  min-width: 160px;
-  margin: auto;
+div#main-container footer section#enquiry-form form button {
+  padding: 0.25rem;
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  font-variant: small-caps;
+  font-weight: 700;
 }
-div#main-container section#certification-links a {
-  display: block;
-  text-align: center;
-  width: 25%;
-}
-div#main-container section#certification-links a img {
-  width: 1rem;
-  height: 1rem;
+div#main-container footer section#enquiry-form form button:hover {
+  background-color: #009f00;
 }
 div#main-container section#media-links {
+  margin: auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  flex-shrink: 0;
+}
+div#main-container section#media-links div.sm-icons-container {
   display: flex;
   min-width: 160px;
   margin: auto;
-  flex-shrink: 0;
 }
-div#main-container section#media-links a {
+div#main-container section#media-links div.sm-icons-container a {
   display: block;
   text-align: center;
   width: 25%;
 }
-div#main-container section#media-links a img {
+div#main-container section#media-links div.sm-icons-container a img {
   width: 1rem;
   height: 1rem;
 }
