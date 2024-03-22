@@ -22,21 +22,29 @@ div#main-container main#main-links a.main-link {
 }
 div#main-container main#main-links a.main-link span {
   padding: 0.5rem;
+  font-size: 3rem;
 }
-div#main-container main#main-links a.main-link span:hover {
-  font-size: 1.5rem;
-  text-shadow: rgb(30, 26, 26) 0.5px 1px 1px;
+div#main-container main#main-links section.hero-section {
+  min-height: 70vh;
+}
+div#main-container main#main-links section.hero-section a.main-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+}
+div#main-container main#main-links section.hero-section a.main-link span {
+  padding: 0.5rem;
+  font-size: 3rem;
 }
 div#main-container main#main-links section {
-  width: 80%;
+  width: 100%;
   margin: 1px auto 2rem;
   padding: 1rem;
 }
-div#main-container main#main-links section#about-me {
-  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-  border-radius: 10px;
-}
-div#main-container main#main-links section#about-me * {
+div#main-container main#main-links section#about-me :not(span) {
   font-size: 0.85rem;
   text-align: center;
 }
@@ -50,6 +58,8 @@ div#main-container main#main-links section#about-me strong, div#main-container m
 div#main-container main#main-links section#about-me strong {
   border-radius: 10px;
   box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
+  padding: 3rem;
+  margin-bottom: 4rem;
 }
 div#main-container main#main-links section#about-me em {
   text-shadow: red 0px 0.15px;
@@ -66,9 +76,10 @@ div#main-container main#main-links section#about-me p:nth-of-type(3) {
   line-height: 1.4rem;
   font-weight: 300;
   text-shadow: red 0px 0.05px;
+  margin-bottom: 4rem;
 }
 div#main-container main#main-links section#about-me article#certification-links {
-  margin: 3rem auto -1rem;
+  margin: 5rem auto 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -85,8 +96,7 @@ div#main-container main#main-links section#about-me article#certification-links 
   height: 1rem;
 }
 div#main-container main#main-links section#portfolio {
-  width: 80%;
-  margin: 1px auto 2rem;
+  margin: 1px auto 4rem;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -94,6 +104,7 @@ div#main-container main#main-links section#portfolio {
 div#main-container main#main-links section#portfolio a {
   display: block;
   padding: 1rem;
+  margin-bottom: -0.25rem;
 }
 div#main-container main#main-links section#portfolio a figure {
   padding-bottom: 1rem;
@@ -105,7 +116,7 @@ div#main-container main#main-links section#portfolio a figure img {
   border-radius: 10px;
 }
 div#main-container main#main-links section#portfolio a figure figcaption {
-  width: 200px;
+  max-width: 90%;
   margin: auto;
   padding: 1rem;
   text-align: left;
@@ -129,6 +140,7 @@ div#main-container main#main-links section#code-examples {
   flex-direction: column;
   background-color: rgb(248, 116, 49);
   position: relative;
+  margin-bottom: 6rem;
 }
 div#main-container main#main-links section#code-examples *:not(span) {
   width: 200px;
@@ -174,6 +186,20 @@ div#main-container main#main-links section#code-examples span.construction-cone 
 div#main-container main#main-links section#scion-coalition-scheme {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
+}
+div#main-container main#main-links section#scion-coalition-scheme a.main-link {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  margin-bottom: -1rem;
+}
+div#main-container main#main-links section#scion-coalition-scheme a.main-link span {
+  padding: 0.5rem;
+  font-size: 3rem;
 }
 div#main-container main#main-links section#scion-coalition-scheme article {
   margin: 1rem;
@@ -214,13 +240,11 @@ div#main-container footer a.main-link {
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
+  margin-bottom: -1rem;
 }
 div#main-container footer a.main-link span {
   padding: 0.5rem;
-}
-div#main-container footer a.main-link span:hover {
-  font-size: 1.5rem;
-  text-shadow: rgb(30, 26, 26) 0.5px 1px 1px;
+  font-size: 3rem;
 }
 div#main-container footer section#enquiry-form {
   margin: 3rem 0;

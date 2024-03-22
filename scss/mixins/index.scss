@@ -1,5 +1,6 @@
 // main-link
 @mixin main-link{
+    // background-color: white;
     display: block;
     width: 100%;
     margin-bottom: 1.5rem;
@@ -11,10 +12,11 @@
     //all nested span elements
     span{
         padding: .5rem;
-        &:hover{  
-            font-size: 1.5rem;                
-            text-shadow: rgb(30, 26, 26) .5px 1px 1px;
-        }
+        font-size: 3rem; 
+        // &:hover{  
+        //     font-size: 5rem;                
+        //     text-shadow: rgb(30, 26, 26) .5px 1px 1px;
+        // }
     }   
 }
 // social media icons

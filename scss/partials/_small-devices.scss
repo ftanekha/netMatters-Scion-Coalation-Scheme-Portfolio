@@ -1,264 +1,279 @@
-// @media screen and (max-width: 575px){
-    div#main-container{
-        min-width:  280px;
-        width: 80%;
-        //stifky footer effect
-        min-height: 100vh;
+div#main-container{
+    min-width:  280px;
+    width: 80%;
+    //stifky footer effect
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    //
+    //MAIN
+    main#main-links{
         display: flex;
         flex-direction: column;
-        //
-        //MAIN
-        main#main-links{
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+        flex-grow: 1;
+        a.main-link{  
+            @include main-link;
+        }
+        section.hero-section{
+            min-height: 70vh;
             //links
             a.main-link{  
                 @include main-link;
             }
-            section{
-                width: 80%;
-                margin: 1px auto 2rem;
-                padding: 1rem;
-                //about-me message, initially hidden?
-                &#about-me{
-                    // end-repeat
-                    box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+        }
+        section{
+            width: 100%;
+            margin: 1px auto 2rem;
+            padding: 1rem;
+            //about-me message, initially hidden?
+            &#about-me{
+                // end-repeat
+                // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                // border-radius: 10px;
+                :not(span){
+                    font-size: .85rem;
+                    text-align: center;
+                }
+                strong, em{
+                    display: block;
+                    margin: 1rem;
+                    padding: .2rem;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+                strong{
                     border-radius: 10px;
-                    *{
-                        font-size: .85rem;
-                        text-align: center;
+                    box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
+                    padding: 3rem;
+                    margin-bottom: 4rem;
+                }
+                em{
+                    text-shadow: red 0px .15px;
+                }
+                span.waving-hand{
+                    display: inline-block;
+                    animation: wave 3s;
+                }
+                p{
+                    text-align: center;
+                    font-weight: 100;
+                    &:nth-of-type(3){
+                        line-height: 1.4rem;
+                        font-weight: 300;
+                        text-shadow: red 0px .05px;
+                        margin-bottom: 4rem;
                     }
-                    strong, em{
-                        display: block;
-                        margin: 1rem;
-                        padding: .2rem;
-                        font-style: normal;
-                        font-weight: 600;
+                }
+                article#certification-links{
+                    margin: 5rem auto 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    // @include sm-icon;
+                    p{
+                        font-size: 50%;
                     }
-                    strong{
-                        border-radius: 10px;
-                        box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
-                    }
-                    em{
-                        text-shadow: red 0px .15px;
-                    }
-                    span.waving-hand{
+                    a{
                         display: inline-block;
-                        animation: wave 3s;
+                        text-align: center;
+                        padding: .5rem;
+                        // width: 25%;
+                        img{
+                            width: 1rem; 
+                            height: 1rem;
+                        }
+                    }
+                }
+            }
+            //portfolio
+            &#portfolio{
+                //repeat
+                // width: 100%;
+                margin: 1px auto 4rem;
+                // end-repeat
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                a{
+                    display: block;
+                    padding: 1rem;
+                    margin-bottom: -.25rem;
+                    figure{
+                        padding-bottom: 1rem;
+                        img{
+                            width: 200px;
+                            padding: 1rem;
+                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                            border-radius: 10px;
+                        }
+                        figcaption{
+                            max-width: 90%;
+                            margin: auto;
+                            padding: 1rem;
+                            text-align: left;
+                            font-size: .6rem;
+                            font-weight: 300;
+                            background-color: white;
+                            text-shadow: red 0px .05px;
+                            border-bottom: solid rgb(30, 26, 26) 1px;
+                            border-radius: .5rem;
+                            &:hover{
+                                transform: scale(1.5);
+                                padding: .5rem;
+                                background-color: rgb(30, 26, 26);
+                                border-radius: .5rem;
+                                font-size: .5rem;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            //code-examples
+            &#code-examples{
+                display: flex;
+                flex-direction: column;
+                // construction orange
+                background-color: rgb(248, 116, 49);
+                position: relative;
+                margin-bottom: 6rem;
+                //everything but span
+                & *:not(span){
+                    width: 200px;
+                    margin: auto;
+                }
+                div#problem-solution-selector{
+                    *{
+                        color: white;
+                        font-size: .6rem;
+                        font-weight: 400;
+                        padding: .3rem;
+                    }
+                    div#solutions-tags-container{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: .25rem;
+                        span.tag{
+                            display: inline-block;
+                            width: 3rem;
+                            text-align: center;
+                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                            border-radius: .2rem;
+                            &:hover{
+                                background-color: rgb(30, 26, 26);
+                            }
+                        }
+                    }
+                }
+                img, audio{
+                    display: block;
+                }
+                img{
+                    margin: 1rem auto;
+                }
+                audio{
+                    height: 1rem;
+                }
+                span.construction-cone{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: .1rem;
+                    background-color: black;
+                }
+            }
+            // Scion Coalition scheme
+            &#scion-coalition-scheme{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 4rem;
+                a.main-link{  
+                    @include main-link;
+                    margin-bottom: -1rem;
+                }
+                article{
+                    margin: 1rem;
+                    text-align: justify;  
+                    padding: .5rem;
+                    // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                    font: {
+
+                        font-weight: 300;
+                        size: .8rem;
                     }
                     p{
-                        text-align: center;
-                        font-weight: 100;
-                        &:nth-of-type(3){
-                            line-height: 1.4rem;
-                            font-weight: 300;
-                            text-shadow: red 0px .05px;
+                        // padding: 1rem;
+                        &:first-letter{
+                            font-family: "Madimi One", sans-serif;
+                            font-size: 200%;
+                            padding: 0;
+                            height: 5rem;
                         }
                     }
-                    article#certification-links{
-                        margin: 3rem auto -1rem;
-                        display: flex;
-                        flex-direction: column;
-                        // @include sm-icon;
-                        p{
-                            font-size: 50%;
-                        }
+                    footer{
+                        padding: 1rem 0;
                         a{
-                            display: inline-block;
-                            text-align: center;
                             padding: .5rem;
-                            // width: 25%;
+                            display: inline-flex;
+                            gap: 1rem;
+                            border: solid .1px rgb(30, 26, 26);
+                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                            font-weight: 700;
+                            span{
+                                flex-grow: 1;
+                            } 
                             img{
-                                width: 1rem; 
+                                width: 1rem;
                                 height: 1rem;
+                                border-radius: 50%;
                             }
                         }
-                    }
-                }
-                //portfolio
-                &#portfolio{
-                    //repeat
-                    width: 80%;
-                    margin: 1px auto 2rem;
-                    // end-repeat
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-                    a{
-                        display: block;
-                        padding: 1rem;
-                        figure{
-                            padding-bottom: 1rem;
-                            img{
-                                width: 200px;
-                                padding: 1rem;
-                                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                                border-radius: 10px;
-                            }
-                            figcaption{
-                                width: 200px;
-                                margin: auto;
-                                padding: 1rem;
-                                text-align: left;
-                                font-size: .6rem;
-                                font-weight: 300;
-                                background-color: white;
-                                text-shadow: red 0px .05px;
-                                border-bottom: solid rgb(30, 26, 26) 1px;
-                                border-radius: .5rem;
-                                &:hover{
-                                    transform: scale(1.5);
-                                    padding: .5rem;
-                                    background-color: rgb(30, 26, 26);
-                                    border-radius: .5rem;
-                                    font-size: .5rem;
-                                    color: white;
-                                }
-                            }
-                        }
-                    }
-                }
-                //code-examples
-                &#code-examples{
-                    display: flex;
-                    flex-direction: column;
-                    // construction orange
-                    background-color: rgb(248, 116, 49);
-                    position: relative;
-                    //everything but span
-                    & *:not(span){
-                        width: 200px;
-                        margin: auto;
-                    }
-                    div#problem-solution-selector{
-                        *{
-                            color: white;
-                            font-size: .6rem;
-                            font-weight: 400;
-                            padding: .3rem;
-                        }
-                        div#solutions-tags-container{
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: .25rem;
-                            span.tag{
-                                display: inline-block;
-                                width: 3rem;
-                                text-align: center;
-                                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                                border-radius: .2rem;
-                                &:hover{
-                                    background-color: rgb(30, 26, 26);
-                                }
-                            }
-                        }
-                    }
-                    img, audio{
-                        display: block;
-                    }
-                    img{
-                        margin: 1rem auto;
-                    }
-                    audio{
-                        height: 1rem;
-                    }
-                    span.construction-cone{
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        padding: .1rem;
-                        background-color: black;
-                    }
-                }
-                // Scion Coalition scheme
-                &#scion-coalition-scheme{
-                    display: flex;
-                    flex-direction: column;
-                    article{
-                        margin: 1rem;
-                        text-align: justify;  
-                        padding: .5rem;
-                        // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                        font: {
-
-                            font-weight: 300;
-                            size: .8rem;
-                        }
-                        p{
-                            // padding: 1rem;
-                            &:first-letter{
-                                font-family: "Madimi One", sans-serif;
-                                font-size: 200%;
-                                padding: 0;
-                                height: 5rem;
-                            }
-                        }
-                        footer{
-                            padding: 1rem 0;
-                            a{
-                                padding: .5rem;
-                                display: inline-flex;
-                                gap: 1rem;
-                                border: solid .1px rgb(30, 26, 26);
-                                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                                font-weight: 700;
-                                span{
-                                    flex-grow: 1;
-                                } 
-                                img{
-                                    width: 1rem;
-                                    height: 1rem;
-                                    border-radius: 50%;
-                                }
-                            }
-                        } 
-                    }
+                    } 
                 }
             }
-        }
-        // FOOTER
-        footer{
-            a.main-link{
-                @include main-link;
-            }
-            section#enquiry-form{
-                margin: 3rem 0;
-                form{
-                    display: flex;
-                    flex-direction: column;
-                    row-gap: 1rem;
-                    textarea{
-                        max-width: 280px;
-                        color: black;
-                    }
-                    button{
-                        padding: .25rem;
-                        background-color: green;
-                        color: white;
-                        border-radius: 3px;
-                        font: {
-                            variant: small-caps;
-                            weight: 700;
-                        }
-                        &:hover{
-                            background-color: lighten(green, 6%);
-                        }
-                    }
-                }
-            }
-        }
-        section#media-links{
-            margin: auto;
-            padding-top: 2rem;
-            display: flex;
-            flex-direction: column;
-            row-gap: 1rem;
-            div.sm-icons-container{
-                @include sm-icon;
-            }
-            //stifky footer effect
-            flex-shrink: 0;
         }
     }
-// }
+    // FOOTER
+    footer{
+        a.main-link{
+            @include main-link;
+            margin-bottom: -1rem;
+        }
+        section#enquiry-form{
+            margin: 3rem 0;
+            form{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+                textarea{
+                    max-width: 280px;
+                    color: black;
+                }
+                button{
+                    padding: .25rem;
+                    background-color: green;
+                    color: white;
+                    border-radius: 3px;
+                    font: {
+                        variant: small-caps;
+                        weight: 700;
+                    }
+                    &:hover{
+                        background-color: lighten(green, 6%);
+                    }
+                }
+            }
+        }
+    }
+    section#media-links{
+        margin: auto;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        div.sm-icons-container{
+            @include sm-icon;
+        }
+        //stifky footer effect
+        flex-shrink: 0;
+    }
+}
