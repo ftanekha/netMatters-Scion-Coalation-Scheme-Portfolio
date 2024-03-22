@@ -1,5 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap");
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  position: fixed;
+  top: 0.3rem;
+  left: 0.3rem;
+}
+header a {
+  opacity: 0.2;
+  margin: 0.2rem 0;
+  font-size: 80%;
+}
+header a:hover {
+  opacity: 1;
+  margin-left: 0.5rem;
+  font-weight: 800;
+  transform: scale(1.2);
+}
+
 div#main-container {
   min-width: 280px;
   width: 80%;
@@ -12,31 +32,27 @@ div#main-container main#main-links {
   flex-direction: column;
   flex-grow: 1;
 }
-div#main-container main#main-links a.main-link {
+div#main-container main#main-links h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
+  padding: 0.5rem;
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-}
-div#main-container main#main-links a.main-link span {
-  padding: 0.5rem;
   font-size: 3rem;
 }
 div#main-container main#main-links section.hero-section {
   min-height: 70vh;
 }
-div#main-container main#main-links section.hero-section a.main-link {
+div#main-container main#main-links section.hero-section h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
+  padding: 0.5rem;
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-}
-div#main-container main#main-links section.hero-section a.main-link span {
-  padding: 0.5rem;
   font-size: 3rem;
 }
 div#main-container main#main-links section {
@@ -44,7 +60,7 @@ div#main-container main#main-links section {
   margin: 1px auto 2rem;
   padding: 1rem;
 }
-div#main-container main#main-links section#about-me :not(span) {
+div#main-container main#main-links section#about-me :not(h2) {
   font-size: 0.85rem;
   text-align: center;
 }
@@ -143,7 +159,8 @@ div#main-container main#main-links section#portfolio a figure figcaption:hover {
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
-    gap: 2%;
+    column-gap: 10%;
+    row-gap: 2rem;
     box-sizing: border-box;
   }
   div#main-container main#main-links section#portfolio div > a {
@@ -220,18 +237,16 @@ div#main-container main#main-links section#scion-coalition-scheme {
   flex-direction: column;
   margin-bottom: 4rem;
 }
-div#main-container main#main-links section#scion-coalition-scheme a.main-link {
+div#main-container main#main-links section#scion-coalition-scheme h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
+  padding: 0.5rem;
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-  margin-bottom: -1rem;
-}
-div#main-container main#main-links section#scion-coalition-scheme a.main-link span {
-  padding: 0.5rem;
   font-size: 3rem;
+  margin-bottom: -1rem;
 }
 div#main-container main#main-links section#scion-coalition-scheme article {
   margin: 1rem;
@@ -265,41 +280,41 @@ div#main-container main#main-links section#scion-coalition-scheme article footer
   height: 1rem;
   border-radius: 50%;
 }
-div#main-container footer a.main-link {
+div#main-container footer#main-footer h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
+  padding: 0.5rem;
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
+  font-size: 3rem;
   margin-bottom: -1rem;
 }
-div#main-container footer a.main-link span {
-  padding: 0.5rem;
-  font-size: 3rem;
-}
-div#main-container footer section#enquiry-form {
+div#main-container footer#main-footer section#enquiry-form {
   margin: 3rem 0;
 }
-div#main-container footer section#enquiry-form form {
+div#main-container footer#main-footer section#enquiry-form form {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-div#main-container footer section#enquiry-form form textarea {
+div#main-container footer#main-footer section#enquiry-form form textarea {
   max-width: 280px;
   color: black;
 }
-div#main-container footer section#enquiry-form form button {
+div#main-container footer#main-footer section#enquiry-form form button {
+  width: 100%;
   padding: 0.25rem;
-  background-color: green;
-  color: white;
+  border: solid 0.1px rgb(30, 26, 26);
+  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 3px;
   font-variant: small-caps;
-  font-weight: 700;
+  font-weight: 900;
 }
-div#main-container footer section#enquiry-form form button:hover {
-  background-color: #009f00;
+div#main-container footer#main-footer section#enquiry-form form button:hover {
+  background-color: #00b300;
+  color: white;
 }
 div#main-container section#media-links {
   margin: auto;

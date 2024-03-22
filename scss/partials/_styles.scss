@@ -1,7 +1,27 @@
+header{
+    display: flex;
+    flex-direction: column;
+    gap: .1rem;
+    position: fixed;
+    top: .3rem;
+    left: .3rem;
+    a{
+        opacity: .2;
+        margin: .2rem 0;
+        font-size: 80%;
+        &:hover{
+            opacity: 1;
+            margin-left: .5rem;
+            font-weight: 800;
+            transform: scale(1.2);
+        }
+    }
+}
+// MAIN CONTENT
 div#main-container{
     min-width:  280px;
     width: 80%;
-    //stifky footer effect
+    //sticky footer effect
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -11,14 +31,14 @@ div#main-container{
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        a.main-link{  
-            @include main-link;
+        h2{  
+            @include section-heading;
         }
         section.hero-section{
             min-height: 70vh;
             //links
-            a.main-link{  
-                @include main-link;
+            h2{  
+                @include section-heading;
             }
         }
         section{
@@ -27,10 +47,8 @@ div#main-container{
             padding: 1rem;
             //about-me message, initially hidden?
             &#about-me{
-                // end-repeat
-                // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                // border-radius: 10px;
-                :not(span){
+                // leave main heading big
+                :not(h2){
                     font-size: .85rem;
                     text-align: center;
                 }
@@ -135,7 +153,8 @@ div#main-container{
                         display: flex;
                         flex-direction: wrap;
                         flex-wrap: wrap;
-                        gap: 2%;
+                        column-gap: 10%;
+                        row-gap: 2rem;
                         box-sizing: border-box;
                         & > a{
                             width: 45%;
@@ -218,8 +237,8 @@ div#main-container{
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 4rem;
-                a.main-link{  
-                    @include main-link;
+                h2{  
+                    @include section-heading;
                     margin-bottom: -1rem;
                 }
                 article{
@@ -243,34 +262,25 @@ div#main-container{
                     }
                     footer{
                         padding: 1rem 0;
-                        a{
-                            padding: .5rem;
-                            display: inline-flex;
-                            gap: 1rem;
-                            border: solid .1px rgb(30, 26, 26);
-                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                            font-weight: 700;
-                            span{
-                                flex-grow: 1;
-                            } 
-                            img{
-                                width: 1rem;
-                                height: 1rem;
-                                border-radius: 50%;
-                            }
-                        }
+                        @include find-out-more-btn;
                     } 
                 }
             }
         }
     }
     // FOOTER
-    footer{
-        a.main-link{
-            @include main-link;
+    footer#main-footer{
+        // margin-left: 0;
+        // width: 80%;
+        // background-color: red;
+        h2{  
+            @include section-heading;
             margin-bottom: -1rem;
         }
         section#enquiry-form{
+            // margin-left: 0;
+            // width: 80%;
+            // background-color: green;
             margin: 3rem 0;
             form{
                 display: flex;
@@ -281,16 +291,18 @@ div#main-container{
                     color: black;
                 }
                 button{
+                    width: 100%;
                     padding: .25rem;
-                    background-color: green;
-                    color: white;
+                    border: solid .1px rgb(30, 26, 26);
+                    box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
                     border-radius: 3px;
                     font: {
                         variant: small-caps;
-                        weight: 700;
+                        weight: 900;
                     }
                     &:hover{
-                        background-color: lighten(green, 6%);
+                        background-color: lighten(green, 10%);
+                        color: white;
                     }
                 }
             }
