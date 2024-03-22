@@ -101,6 +101,7 @@ div#main-container{
                         padding-bottom: 1rem;
                         img{
                             width: 200px;
+                            height: 100px;
                             padding: 1rem;
                             box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
                             border-radius: 10px;
@@ -124,6 +125,18 @@ div#main-container{
                                 font-size: .5rem;
                                 color: white;
                             }
+                        }
+                    }
+                }
+                @media screen and (min-width: 576px){
+                    div{
+                        display: flex;
+                        flex-direction: wrap;
+                        flex-wrap: wrap;
+                        gap: 2%;
+                        box-sizing: border-box;
+                        & > a{
+                            width: 45%;
                         }
                     }
                 }
