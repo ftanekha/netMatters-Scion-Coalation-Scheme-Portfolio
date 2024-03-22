@@ -7,29 +7,14 @@
         display: flex;
         flex-direction: column;
         //
-        //main links
+        //MAIN
         main#main-links{
             display: flex;
             flex-direction: column;
             flex-grow: 1;
             //links
-            a.main-link{
-                display: block;
-                width: 100%;
-                margin-bottom: 1.5rem;
-                text-align: center;
-                font: {
-                    family: "Madimi One", sans-serif;
-                    weight: 400;
-                }
-                //all nested span elements
-                span{
-                    padding: .5rem;
-                    &:hover{  
-                        font-size: 1.5rem;                
-                        text-shadow: rgb(30, 26, 26) .5px 1px 1px;
-                    }
-                }   
+            a.main-link{  
+                @include main-link;
             }
             section{
                 width: 80%;
@@ -209,6 +194,25 @@
                                 }
                             }
                         } 
+                    }
+                }
+            }
+        }
+
+        // FOOTER
+        footer{
+            a.main-link{
+                @include main-link;
+            }
+            section#enquiry-form{
+                margin: 3rem 0;
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    textarea{
+                        max-width: 280px;
+                        color: black;
                     }
                 }
             }

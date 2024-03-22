@@ -1,3 +1,23 @@
+// main-link
+@mixin main-link{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font: {
+        family: "Madimi One", sans-serif;
+        weight: 400;
+    }
+    //all nested span elements
+    span{
+        padding: .5rem;
+        &:hover{  
+            font-size: 1.5rem;                
+            text-shadow: rgb(30, 26, 26) .5px 1px 1px;
+        }
+    }   
+}
+// social media icons
 @mixin sm-icon{
     display: flex;
     min-width: 160px;
