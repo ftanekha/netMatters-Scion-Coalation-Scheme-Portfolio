@@ -154,7 +154,7 @@
                         display: block;
                     }
                     img{
-                        margin: 1rem;
+                        margin: 1rem auto;
                     }
                     audio{
                         height: 1rem;
@@ -165,6 +165,50 @@
                         right: 0;
                         padding: .1rem;
                         background-color: black;
+                    }
+                }
+                // Scion Coalition scheme
+                &#scion-coalition-scheme{
+                    display: flex;
+                    flex-direction: column;
+                    article{
+                        margin: 1rem;
+                        text-align: justify;  
+                        padding: .5rem;
+                        // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                        font: {
+
+                            font-weight: 300;
+                            size: .8rem;
+                        }
+                        p{
+                            // padding: 1rem;
+                            &:first-letter{
+                                font-family: "Madimi One", sans-serif;
+                                font-size: 200%;
+                                padding: 0;
+                                height: 5rem;
+                            }
+                        }
+                        footer{
+                            padding: 1rem 0;
+                            a{
+                                padding: .5rem;
+                                display: inline-flex;
+                                gap: 1rem;
+                                border: solid .1px rgb(30, 26, 26);
+                                box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                                font-weight: 700;
+                                span{
+                                    flex-grow: 1;
+                                } 
+                                img{
+                                    width: 1rem;
+                                    height: 1rem;
+                                    border-radius: 50%;
+                                }
+                            }
+                        } 
                     }
                 }
             }
