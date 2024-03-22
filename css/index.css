@@ -50,19 +50,21 @@ div#main-container main#main-links section#about-me :not(span) {
 }
 div#main-container main#main-links section#about-me strong, div#main-container main#main-links section#about-me em {
   display: block;
-  margin: 1rem;
   padding: 0.2rem;
   font-style: normal;
   font-weight: 600;
 }
 div#main-container main#main-links section#about-me strong {
+  display: block;
   border-radius: 10px;
   box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
   padding: 3rem;
-  margin-bottom: 4rem;
+  max-width: 400px;
+  margin: 4rem auto;
 }
 div#main-container main#main-links section#about-me em {
   text-shadow: red 0px 0.15px;
+  margin: 1rem;
 }
 div#main-container main#main-links section#about-me span.waving-hand {
   display: inline-block;
@@ -180,21 +182,38 @@ div#main-container main#main-links section#code-examples div#problem-solution-se
 div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag:hover {
   background-color: rgb(30, 26, 26);
 }
-div#main-container main#main-links section#code-examples img, div#main-container main#main-links section#code-examples audio {
+div#main-container main#main-links section#code-examples div#coming-soon-playlist-container img, div#main-container main#main-links section#code-examples div#coming-soon-playlist-container audio {
   display: block;
 }
-div#main-container main#main-links section#code-examples img {
+div#main-container main#main-links section#code-examples div#coming-soon-playlist-container img {
   margin: 1rem auto;
 }
-div#main-container main#main-links section#code-examples audio {
+div#main-container main#main-links section#code-examples div#coming-soon-playlist-container audio {
   height: 1rem;
 }
-div#main-container main#main-links section#code-examples span.construction-cone {
+div#main-container main#main-links section#code-examples div#coming-soon-playlist-container span.construction-cone {
   position: absolute;
   top: 0;
   right: 0;
   padding: 0.1rem;
   background-color: black;
+}
+@media screen and (min-width: 576px) {
+  div#main-container main#main-links section#code-examples {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+    box-sizing: border-box;
+    padding: 2rem auto;
+    padding: 1rem;
+  }
+  div#main-container main#main-links section#code-examples > div {
+    width: 45%;
+  }
+  div#main-container main#main-links section#code-examples > div p {
+    width: 80%;
+  }
 }
 div#main-container main#main-links section#scion-coalition-scheme {
   display: flex;
