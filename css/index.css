@@ -53,12 +53,13 @@ header a.menu {
 }
 @media screen and (min-width: 922px) {
   header a {
-    width: 150px;
+    width: 140px;
     font-size: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
   header {
+    width: 150px;
     height: 100vh;
     background: black;
   }

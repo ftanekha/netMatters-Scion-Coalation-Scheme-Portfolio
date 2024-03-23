@@ -12,6 +12,7 @@ header{
         @include main-nav-item;
     }
     @media screen and (min-width: 1200px) {
+        width: 150px;
         height: 100vh;
         background: black;
     }
