@@ -344,13 +344,47 @@ div#main-container footer#main-footer section#enquiry-form {
   margin: 3rem 0;
 }
 div#main-container footer#main-footer section#enquiry-form form {
+  width: 290px;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
-div#main-container footer#main-footer section#enquiry-form form textarea {
-  max-width: 280px;
+div#main-container footer#main-footer section#enquiry-form form div {
+  width: 100%;
+  padding: 0;
+}
+div#main-container footer#main-footer section#enquiry-form form div.contact-info-detail {
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+div#main-container footer#main-footer section#enquiry-form form div.contact-info-detail label {
+  width: 35%;
+  padding: 0.2rem;
+  color: #5e6480;
+  align-self: center;
+  font-size: 80%;
+  font-weight: 500;
+}
+div#main-container footer#main-footer section#enquiry-form form div.contact-info-detail input {
+  flex-grow: 1;
+  margin: 0.2rem 0;
+  border: 0;
+  outline: 0;
+}
+div#main-container footer#main-footer section#enquiry-form form div input, div#main-container footer#main-footer section#enquiry-form form div textarea {
+  padding: 0.25rem;
+  background-color: lightgray;
   color: black;
+}
+div#main-container footer#main-footer section#enquiry-form form div textarea {
+  margin: 0;
+  max-width: 100%;
+  min-height: 10rem;
+  height: 100%;
+  color: black;
+  border: 0;
+  outline: 0;
 }
 div#main-container footer#main-footer section#enquiry-form form button {
   width: 100%;
@@ -363,7 +397,7 @@ div#main-container footer#main-footer section#enquiry-form form button {
 }
 div#main-container footer#main-footer section#enquiry-form form button:hover {
   box-shadow: inset #706161 0px 0px 0.2rem;
-  color: #706161;
+  color: #5e6480;
 }
 div#main-container section#media-links {
   margin: auto;

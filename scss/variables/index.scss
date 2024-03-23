@@ -6,4 +6,6 @@ $bold-sans-serif: "Madimi One", sans-serif;
 // Base declarations
 $base-typeface: "Spline Sans Mono", monospace;
 $base-text-color: $netmatters-black;
+$light-base-text: lighten($base-text-color, 20%);
+$dark-base-text: darken($base-text-color, 80%);
 $base-fontsize: 16px;

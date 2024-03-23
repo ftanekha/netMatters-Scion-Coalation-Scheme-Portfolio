@@ -226,18 +226,55 @@ div#main-container{
         section#enquiry-form{
             margin: 3rem 0;
             form{
+                width: 290px;
                 display: flex;
                 flex-direction: column;
                 row-gap: 1rem;
-                textarea{
-                    max-width: 280px;
-                    color: black;
+                div{
+                    // background-color: green;
+                    width: 100%;
+                    padding: 0;
+                    &.contact-info-detail{
+                        padding: 0;
+                        display: flex;
+                        box-sizing: border-box;
+                        label{
+                            width: 35%;
+                            padding: .2rem;
+                            color: $light-base-text;
+                            align-self: center;
+                            font: {
+                                size: 80%;
+                                weight: 500;
+                            }
+                        }
+                        input{
+                            flex-grow: 1;
+                            margin: .2rem 0;
+                            border: 0;
+                            outline: 0;
+                        }
+                    }
+                    input, textarea{
+                        padding: .25rem;
+                        background-color: lightgray;
+                        color: $dark-base-text;
+                    }
+                    textarea{
+                        margin: 0;
+                        max-width: 100%;
+                        min-height: 10rem;
+                        height: 100%;
+                        color: black;
+                        border: 0;
+                        outline: 0;
+                    }
                 }
                 button{
                     width: 100%;
                     padding: .25rem;
                     border: solid .1px rgb(30, 26, 26);
-                    box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                    box-shadow: inset $box-shadow;
                     border-radius: 3px;
                     font: {
                         variant: small-caps;
@@ -245,7 +282,7 @@ div#main-container{
                     }
                     &:hover{
                         box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
-                        color: lighten(rgb(30, 26, 26), 30%);
+                        color: $light-base-text;
                     }
                 }
             }
