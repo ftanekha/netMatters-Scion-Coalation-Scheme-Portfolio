@@ -153,16 +153,20 @@ div#main-container{
                 //everything but span
                 & *:not(span){
                     width: 200px;
-                    margin: auto;
                 }
                 div#problem-solution-selector{
                     *{
                         color: white;
                         font-size: .6rem;
                         font-weight: 400;
-                        padding: .3rem;
+                    }
+                    p{
+                        padding: 1.5rem 0;
+                        font-size: .75rem;
+                        text-align: justify;
                     }
                     div#solutions-tags-container{
+                        padding: 1rem 0;
                         display: flex;
                         flex-wrap: wrap;
                         gap: .25rem;
@@ -185,20 +189,12 @@ div#main-container{
                         @include construction-cone;
                     }
                 }
-                @media screen and (min-width: 576px){
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    gap: 2%;
-                    box-sizing: border-box;
-                    padding: 2rem auto;
-                    padding: 1rem;
-                    & > div{
-                        width: 45%;
-                        p{
-                            width: 80%;
-                        }
-                    }
+                @media screen and (min-width: 768px){
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr;
+                    gap: 5%;
+                    align-items: center;
                 }
             }
             // Scion Coalition Scheme

@@ -221,15 +221,19 @@ div#main-container main#main-content section#code-examples {
 }
 div#main-container main#main-content section#code-examples *:not(span) {
   width: 200px;
-  margin: auto;
 }
 div#main-container main#main-content section#code-examples div#problem-solution-selector * {
   color: white;
   font-size: 0.6rem;
   font-weight: 400;
-  padding: 0.3rem;
+}
+div#main-container main#main-content section#code-examples div#problem-solution-selector p {
+  padding: 1.5rem 0;
+  font-size: 0.75rem;
+  text-align: justify;
 }
 div#main-container main#main-content section#code-examples div#problem-solution-selector div#solutions-tags-container {
+  padding: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
@@ -260,21 +264,13 @@ div#main-container main#main-content section#code-examples div#coming-soon-playl
   padding: 0.1rem;
   background-color: black;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 768px) {
   div#main-container main#main-content section#code-examples {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2%;
-    box-sizing: border-box;
-    padding: 2rem auto;
-    padding: 1rem;
-  }
-  div#main-container main#main-content section#code-examples > div {
-    width: 45%;
-  }
-  div#main-container main#main-content section#code-examples > div p {
-    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5%;
+    align-items: center;
   }
 }
 div#main-container main#main-content section#scion-coalition-scheme {
