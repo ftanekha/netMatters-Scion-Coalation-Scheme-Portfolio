@@ -7,17 +7,55 @@ header {
   position: fixed;
   top: 0.3rem;
   left: 0.3rem;
+  z-index: 5;
 }
 header a {
+  width: 90px;
   opacity: 0.2;
   margin: 0.2rem 0;
   font-size: 80%;
+  border-radius: 3px;
 }
 header a:hover {
   opacity: 1;
   margin-left: 0.5rem;
   font-weight: 800;
   transform: scale(1.2);
+}
+header a.menu {
+  background-color: transparent;
+  color: rgb(30, 26, 26);
+  width: 70px;
+  padding: 0.1rem;
+  padding-left: 0.4rem;
+  font-variant: small-caps;
+  font-size: 100%;
+  font-weight: 900;
+  opacity: 0.5;
+  letter-spacing: 0.5rem;
+}
+@media screen and (min-width: 576px) {
+  header a {
+    background: rgb(30, 26, 26);
+    opacity: 0.1;
+    padding: 0.25rem;
+    color: white;
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  header a {
+    width: 140px;
+    opacity: 0.7;
+    padding: 1rem;
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    height: 100vh;
+    background: black;
+  }
 }
 
 div#main-container {
@@ -146,13 +184,15 @@ div#main-container main#main-links section#portfolio a figure figcaption {
   border-bottom: solid rgb(30, 26, 26) 1px;
   border-radius: 0.5rem;
 }
-div#main-container main#main-links section#portfolio a figure figcaption:hover {
-  transform: scale(1.5);
-  padding: 0.5rem;
-  background-color: rgb(30, 26, 26);
-  border-radius: 0.5rem;
-  font-size: 0.5rem;
-  color: white;
+@media screen and (min-width: 991px) {
+  div#main-container main#main-links section#portfolio a figure figcaption:hover {
+    transform: scale(1.5);
+    padding: 0.5rem;
+    background-color: rgb(30, 26, 26);
+    border-radius: 0.5rem;
+    font-size: 0.5rem;
+    color: white;
+  }
 }
 @media screen and (min-width: 576px) {
   div#main-container main#main-links section#portfolio div {
@@ -168,11 +208,14 @@ div#main-container main#main-links section#portfolio a figure figcaption:hover {
   }
 }
 div#main-container main#main-links section#code-examples {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   background-color: rgb(248, 116, 49);
   position: relative;
   margin-bottom: 6rem;
+  z-index: 0;
 }
 div#main-container main#main-links section#code-examples *:not(span) {
   width: 200px;

@@ -1,20 +1,59 @@
 header{
+    //menu
     display: flex;
     flex-direction: column;
     gap: .1rem;
     position: fixed;
     top: .3rem;
     left: .3rem;
+    z-index: 5;
     a{
+        width: 90px;
         opacity: .2;
         margin: .2rem 0;
         font-size: 80%;
+        border-radius: 3px;
         &:hover{
             opacity: 1;
             margin-left: .5rem;
             font-weight: 800;
             transform: scale(1.2);
         }
+        &.menu{
+            background-color: transparent;
+            color: rgb(30, 26, 26);
+            width: 70px;
+            padding: .1rem;
+            padding-left: .4rem;
+            font: {
+                variant: small-caps;
+                size: 100%;
+                weight: 900;
+            }
+            opacity: .5;
+            letter-spacing: .5rem;
+        }
+    }
+    @media screen and (min-width: 576px) {
+        a{ 
+            background: rgb(30, 26, 26);
+            opacity: .1;
+            padding: .25rem;
+            color: white;
+            font-size: 50%;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        a{ 
+            width: 140px;
+            opacity: .7;
+            padding: 1rem;
+            font-size: 100%;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        height: 100vh;
+        background: black;
     }
 }
 // MAIN CONTENT
@@ -137,13 +176,16 @@ div#main-container{
                             text-shadow: red 0px .05px;
                             border-bottom: solid rgb(30, 26, 26) 1px;
                             border-radius: .5rem;
-                            &:hover{
-                                transform: scale(1.5);
-                                padding: .5rem;
-                                background-color: rgb(30, 26, 26);
-                                border-radius: .5rem;
-                                font-size: .5rem;
-                                color: white;
+                            //show tooltip on large screens
+                            @media screen and (min-width: 991px){
+                                &:hover{
+                                    transform: scale(1.5);
+                                    padding: .5rem;
+                                    background-color: rgb(30, 26, 26);
+                                    border-radius: .5rem;
+                                    font-size: .5rem;
+                                    color: white;
+                                }
                             }
                         }
                     }
@@ -164,12 +206,15 @@ div#main-container{
             }
             //code-examples
             &#code-examples{
+                width: 90%;
+                margin: 0 auto;
                 display: flex;
                 flex-direction: column;
                 // construction orange
                 background-color: rgb(248, 116, 49);
                 position: relative;
                 margin-bottom: 6rem;
+                z-index: 0;
                 //everything but span
                 & *:not(span){
                     width: 200px;
