@@ -53,7 +53,7 @@
     font: {
         family: $bold-sans-serif;
         weight: 400;
-        size: 3rem; 
+        size: 2.5rem; 
     }
 }
 //portfolio-item-figcaption
@@ -66,16 +66,12 @@
     font-weight: 300;
     background-color: white;
     text-shadow: red 0px .05px;
-    border-bottom: solid rgb(30, 26, 26) 1px;
-    border-radius: .5rem;
     //show tooltip on xl screens
     @media screen and (min-width: 1200px){
         &:hover{
-            transform: scale(1.5);
-            padding: .5rem;
+            transform: scale(1.2);
             background-color: rgb(30, 26, 26);
             border-radius: .5rem;
-            font-size: .5rem;
             color: white;
         }
     }

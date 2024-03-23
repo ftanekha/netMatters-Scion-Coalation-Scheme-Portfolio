@@ -84,7 +84,7 @@ div#main-container main#main-content h2 {
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 div#main-container main#main-content section.hero-section {
   min-height: 70vh;
@@ -97,7 +97,7 @@ div#main-container main#main-content section.hero-section h2 {
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 div#main-container main#main-content section {
   width: 100%;
@@ -187,16 +187,12 @@ div#main-container main#main-content section#portfolio a figure figcaption {
   font-weight: 300;
   background-color: white;
   text-shadow: red 0px 0.05px;
-  border-bottom: solid rgb(30, 26, 26) 1px;
-  border-radius: 0.5rem;
 }
 @media screen and (min-width: 1200px) {
   div#main-container main#main-content section#portfolio a figure figcaption:hover {
-    transform: scale(1.5);
-    padding: 0.5rem;
+    transform: scale(1.2);
     background-color: rgb(30, 26, 26);
     border-radius: 0.5rem;
-    font-size: 0.5rem;
     color: white;
   }
 }
@@ -294,7 +290,7 @@ div#main-container main#main-content section#scion-coalition-scheme h2 {
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: -1rem;
 }
 div#main-container main#main-content section#scion-coalition-scheme article {
@@ -337,7 +333,7 @@ div#main-container footer#main-footer h2 {
   text-align: center;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: -1rem;
 }
 div#main-container footer#main-footer section#enquiry-form {
