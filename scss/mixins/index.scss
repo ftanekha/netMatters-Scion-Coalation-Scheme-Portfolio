@@ -43,5 +43,8 @@
             width: 1rem; 
             height: 1rem;
         }
+        &:hover{
+            transform: scale(1.5);
+        }
     }
 }

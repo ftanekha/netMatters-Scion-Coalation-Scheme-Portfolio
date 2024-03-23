@@ -8,7 +8,7 @@ header{
     left: .3rem;
     z-index: 5;
     a{
-        width: 90px;
+        width: 70px;
         opacity: .2;
         margin: .2rem 0;
         font-size: 80%;
@@ -33,21 +33,21 @@ header{
             opacity: .5;
             letter-spacing: .5rem;
         }
-    }
-    @media screen and (min-width: 576px) {
-        a{ 
+        @media screen and (min-width: 576px) {
             background: rgb(30, 26, 26);
             opacity: .1;
             padding: .25rem;
             color: white;
             font-size: 50%;
         }
-    }
-    @media screen and (min-width: 768px) {
-        a{ 
-            width: 140px;
+        @media screen and (min-width: 768px) {
+            width: 100px;
             opacity: .7;
             padding: 1rem;
+            font-size: 80%;
+        }
+        @media screen and (min-width: 922px) {
+            width: 140px;
             font-size: 100%;
         }
     }
@@ -127,7 +127,7 @@ div#main-container{
                     margin: 5rem auto 1rem;
                     display: flex;
                     flex-direction: column;
-                    // @include sm-icon;
+                    // @include sm-icon;??
                     p{
                         font-size: 50%;
                     }
@@ -135,7 +135,6 @@ div#main-container{
                         display: inline-block;
                         text-align: center;
                         padding: .5rem;
-                        // width: 25%;
                         img{
                             width: 1rem; 
                             height: 1rem;
@@ -145,8 +144,6 @@ div#main-container{
             }
             //portfolio
             &#portfolio{
-                //repeat
-                // width: 100%;
                 margin: 1px auto 4rem;
                 // end-repeat
                 display: flex;
@@ -176,8 +173,8 @@ div#main-container{
                             text-shadow: red 0px .05px;
                             border-bottom: solid rgb(30, 26, 26) 1px;
                             border-radius: .5rem;
-                            //show tooltip on large screens
-                            @media screen and (min-width: 991px){
+                            //show tooltip on xl screens
+                            @media screen and (min-width: 1200px){
                                 &:hover{
                                     transform: scale(1.5);
                                     padding: .5rem;
@@ -290,7 +287,6 @@ div#main-container{
                     margin: 1rem;
                     text-align: justify;  
                     padding: .5rem;
-                    // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
                     font: {
 
                         font-weight: 300;
@@ -315,17 +311,11 @@ div#main-container{
     }
     // FOOTER
     footer#main-footer{
-        // margin-left: 0;
-        // width: 80%;
-        // background-color: red;
         h2{  
             @include section-heading;
             margin-bottom: -1rem;
         }
         section#enquiry-form{
-            // margin-left: 0;
-            // width: 80%;
-            // background-color: green;
             margin: 3rem 0;
             form{
                 display: flex;
@@ -346,8 +336,8 @@ div#main-container{
                         weight: 900;
                     }
                     &:hover{
-                        background-color: lighten(green, 10%);
-                        color: white;
+                        box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
+                        color: lighten(rgb(30, 26, 26), 30%);
                     }
                 }
             }
