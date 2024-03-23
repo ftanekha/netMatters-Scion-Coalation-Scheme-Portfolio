@@ -1,5 +1,5 @@
 header{
-    //menu
+    //MAIN NAVIGATION
     display: flex;
     flex-direction: column;
     gap: .1rem;
@@ -7,49 +7,9 @@ header{
     top: .3rem;
     left: .3rem;
     z-index: 5;
+    //nav-items
     a{
-        width: 70px;
-        opacity: .2;
-        margin: .2rem 0;
-        font-size: 80%;
-        border-radius: 3px;
-        &:hover{
-            opacity: 1;
-            margin-left: .5rem;
-            font-weight: 800;
-            transform: scale(1.2);
-        }
-        &.menu{
-            background-color: transparent;
-            color: rgb(30, 26, 26);
-            width: 70px;
-            padding: .1rem;
-            padding-left: .4rem;
-            font: {
-                variant: small-caps;
-                size: 100%;
-                weight: 900;
-            }
-            opacity: .5;
-            letter-spacing: .5rem;
-        }
-        @media screen and (min-width: 576px) {
-            background: rgb(30, 26, 26);
-            opacity: .1;
-            padding: .25rem;
-            color: white;
-            font-size: 50%;
-        }
-        @media screen and (min-width: 768px) {
-            width: 100px;
-            opacity: .7;
-            padding: 1rem;
-            font-size: 80%;
-        }
-        @media screen and (min-width: 922px) {
-            width: 140px;
-            font-size: 100%;
-        }
+        @include main-nav-item;
     }
     @media screen and (min-width: 1200px) {
         height: 100vh;
@@ -65,8 +25,7 @@ div#main-container{
     display: flex;
     flex-direction: column;
     //
-    //MAIN
-    main#main-links{
+    main#main-content{
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -75,7 +34,6 @@ div#main-container{
         }
         section.hero-section{
             min-height: 70vh;
-            //links
             h2{  
                 @include section-heading;
             }
@@ -84,7 +42,7 @@ div#main-container{
             width: 100%;
             margin: 1px auto 2rem;
             padding: 1rem;
-            //about-me message, initially hidden?
+            //about-me
             &#about-me{
                 // leave main heading big
                 :not(h2){
@@ -100,7 +58,7 @@ div#main-container{
                 strong{
                     display: block;
                     border-radius: 10px;
-                    box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
+                    box-shadow: $box-shadow;
                     padding: 3rem;
                     max-width: 400px;
                     margin: 4rem auto;
@@ -159,31 +117,11 @@ div#main-container{
                             width: 200px;
                             height: 100px;
                             padding: 1rem;
-                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+                            box-shadow: inset $box-shadow;
                             border-radius: 10px;
                         }
                         figcaption{
-                            max-width: 90%;
-                            margin: auto;
-                            padding: 1rem;
-                            text-align: left;
-                            font-size: .6rem;
-                            font-weight: 300;
-                            background-color: white;
-                            text-shadow: red 0px .05px;
-                            border-bottom: solid rgb(30, 26, 26) 1px;
-                            border-radius: .5rem;
-                            //show tooltip on xl screens
-                            @media screen and (min-width: 1200px){
-                                &:hover{
-                                    transform: scale(1.5);
-                                    padding: .5rem;
-                                    background-color: rgb(30, 26, 26);
-                                    border-radius: .5rem;
-                                    font-size: .5rem;
-                                    color: white;
-                                }
-                            }
+                            @include portfolio-item-figcaption;
                         }
                     }
                 }
@@ -229,14 +167,7 @@ div#main-container{
                         flex-wrap: wrap;
                         gap: .25rem;
                         span.tag{
-                            display: inline-block;
-                            width: 3rem;
-                            text-align: center;
-                            box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
-                            border-radius: .2rem;
-                            &:hover{
-                                background-color: rgb(30, 26, 26);
-                            }
+                            @include tag;
                         }
                     }
                 }
@@ -251,11 +182,7 @@ div#main-container{
                         height: 1rem;
                     }
                     span.construction-cone{
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        padding: .1rem;
-                        background-color: black;
+                        @include construction-cone;
                     }
                 }
                 @media screen and (min-width: 576px){
@@ -274,7 +201,7 @@ div#main-container{
                     }
                 }
             }
-            // Scion Coalition scheme
+            // Scion Coalition Scheme
             &#scion-coalition-scheme{
                 display: flex;
                 flex-direction: column;
@@ -284,27 +211,7 @@ div#main-container{
                     margin-bottom: -1rem;
                 }
                 article{
-                    margin: 1rem;
-                    text-align: justify;  
-                    padding: .5rem;
-                    font: {
-
-                        font-weight: 300;
-                        size: .8rem;
-                    }
-                    p{
-                        // padding: 1rem;
-                        &:first-letter{
-                            font-family: "Madimi One", sans-serif;
-                            font-size: 200%;
-                            padding: 0;
-                            height: 5rem;
-                        }
-                    }
-                    footer{
-                        padding: 1rem 0;
-                        @include find-out-more-btn;
-                    } 
+                    @include scs-article;
                 }
             }
         }
@@ -315,6 +222,7 @@ div#main-container{
             @include section-heading;
             margin-bottom: -1rem;
         }
+        // ENQUIRY FORM
         section#enquiry-form{
             margin: 3rem 0;
             form{
@@ -343,6 +251,7 @@ div#main-container{
             }
         }
     }
+    //SM LINKS
     section#media-links{
         margin: auto;
         padding-top: 2rem;

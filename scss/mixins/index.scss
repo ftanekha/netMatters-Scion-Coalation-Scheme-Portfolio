@@ -1,3 +1,48 @@
+//main-nav-item
+@mixin main-nav-item{
+    width: 70px;
+    opacity: .2;
+    margin: .2rem 0;
+    font-size: 80%;
+    border-radius: 3px;
+    &:hover{
+        opacity: 1;
+        margin-left: .5rem;
+        font-weight: 800;
+        transform: scale(1.2);
+    }
+    &.menu{
+        background-color: transparent;
+        color: rgb(30, 26, 26);
+        width: 70px;
+        padding: .1rem;
+        padding-left: .4rem;
+        font: {
+            variant: small-caps;
+            size: 100%;
+            weight: 900;
+        }
+        opacity: .5;
+        letter-spacing: .5rem;
+    }
+    @media screen and (min-width: 576px) {
+        background: rgb(30, 26, 26);
+        opacity: .1;
+        padding: .25rem;
+        color: white;
+        font-size: 50%;
+    }
+    @media screen and (min-width: 768px) {
+        width: 100px;
+        opacity: .7;
+        padding: 1rem;
+        font-size: 80%;
+    }
+    @media screen and (min-width: 922px) {
+        width: 140px;
+        font-size: 100%;
+    }
+}
 // main-link
 @mixin section-heading{
     display: block;
@@ -6,19 +51,84 @@
     padding: .5rem;
     text-align: center;
     font: {
-        family: "Madimi One", sans-serif;
+        family: $bold-sans-serif;
         weight: 400;
         size: 3rem; 
     }
 }
-//
+//portfolio-item-figcaption
+@mixin portfolio-item-figcaption{
+    max-width: 90%;
+    margin: auto;
+    padding: 1rem;
+    text-align: left;
+    font-size: .6rem;
+    font-weight: 300;
+    background-color: white;
+    text-shadow: red 0px .05px;
+    border-bottom: solid rgb(30, 26, 26) 1px;
+    border-radius: .5rem;
+    //show tooltip on xl screens
+    @media screen and (min-width: 1200px){
+        &:hover{
+            transform: scale(1.5);
+            padding: .5rem;
+            background-color: rgb(30, 26, 26);
+            border-radius: .5rem;
+            font-size: .5rem;
+            color: white;
+        }
+    }
+}
+//tags
+@mixin tag{
+    display: inline-block;
+    width: 3rem;
+    text-align: center;
+    box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+    border-radius: .2rem;
+    &:hover{
+        background-color: rgb(30, 26, 26);
+    }
+}
+//construction-cone
+@mixin construction-cone{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .1rem;
+    background-color: black;
+}
+//Scion coalition scheme articles
+@mixin scs-article{
+    margin: 1rem;
+    text-align: justify;  
+    padding: .5rem;
+    font: {
+        font-weight: 300;
+        size: .8rem;
+    }
+    p{
+        &:first-letter{
+            font-family: $bold-sans-serif;
+            font-size: 200%;
+            padding: 0;
+            height: 5rem;
+        }
+    }
+    footer{
+        padding: 1rem 0;
+        @include find-out-more-btn;
+    } 
+}
+//find out more button
 @mixin find-out-more-btn{
     a{
         padding: .5rem;
         display: inline-flex;
         gap: 1rem;
         border: solid .1px rgb(30, 26, 26);
-        box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+        box-shadow: inset $box-shadow;
         font-weight: 700;
         span{
             flex-grow: 1;

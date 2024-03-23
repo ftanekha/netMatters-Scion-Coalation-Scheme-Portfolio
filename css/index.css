@@ -71,12 +71,12 @@ div#main-container {
   display: flex;
   flex-direction: column;
 }
-div#main-container main#main-links {
+div#main-container main#main-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-div#main-container main#main-links h2 {
+div#main-container main#main-content h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
@@ -86,10 +86,10 @@ div#main-container main#main-links h2 {
   font-weight: 400;
   font-size: 3rem;
 }
-div#main-container main#main-links section.hero-section {
+div#main-container main#main-content section.hero-section {
   min-height: 70vh;
 }
-div#main-container main#main-links section.hero-section h2 {
+div#main-container main#main-content section.hero-section h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
@@ -99,22 +99,22 @@ div#main-container main#main-links section.hero-section h2 {
   font-weight: 400;
   font-size: 3rem;
 }
-div#main-container main#main-links section {
+div#main-container main#main-content section {
   width: 100%;
   margin: 1px auto 2rem;
   padding: 1rem;
 }
-div#main-container main#main-links section#about-me :not(h2) {
+div#main-container main#main-content section#about-me :not(h2) {
   font-size: 0.85rem;
   text-align: center;
 }
-div#main-container main#main-links section#about-me strong, div#main-container main#main-links section#about-me em {
+div#main-container main#main-content section#about-me strong, div#main-container main#main-content section#about-me em {
   display: block;
   padding: 0.2rem;
   font-style: normal;
   font-weight: 600;
 }
-div#main-container main#main-links section#about-me strong {
+div#main-container main#main-content section#about-me strong {
   display: block;
   border-radius: 10px;
   box-shadow: rgb(30, 26, 26) 0px 0px 1rem;
@@ -122,63 +122,63 @@ div#main-container main#main-links section#about-me strong {
   max-width: 400px;
   margin: 4rem auto;
 }
-div#main-container main#main-links section#about-me em {
+div#main-container main#main-content section#about-me em {
   text-shadow: red 0px 0.15px;
   margin: 1rem;
 }
-div#main-container main#main-links section#about-me span.waving-hand {
+div#main-container main#main-content section#about-me span.waving-hand {
   display: inline-block;
   animation: wave 3s;
 }
-div#main-container main#main-links section#about-me p {
+div#main-container main#main-content section#about-me p {
   text-align: center;
   font-weight: 100;
 }
-div#main-container main#main-links section#about-me p:nth-of-type(3) {
+div#main-container main#main-content section#about-me p:nth-of-type(3) {
   line-height: 1.4rem;
   font-weight: 300;
   text-shadow: red 0px 0.05px;
   margin-bottom: 4rem;
 }
-div#main-container main#main-links section#about-me article#certification-links {
+div#main-container main#main-content section#about-me article#certification-links {
   margin: 5rem auto 1rem;
   display: flex;
   flex-direction: column;
 }
-div#main-container main#main-links section#about-me article#certification-links p {
+div#main-container main#main-content section#about-me article#certification-links p {
   font-size: 50%;
 }
-div#main-container main#main-links section#about-me article#certification-links a {
+div#main-container main#main-content section#about-me article#certification-links a {
   display: inline-block;
   text-align: center;
   padding: 0.5rem;
 }
-div#main-container main#main-links section#about-me article#certification-links a img {
+div#main-container main#main-content section#about-me article#certification-links a img {
   width: 1rem;
   height: 1rem;
 }
-div#main-container main#main-links section#portfolio {
+div#main-container main#main-content section#portfolio {
   margin: 1px auto 4rem;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-div#main-container main#main-links section#portfolio a {
+div#main-container main#main-content section#portfolio a {
   display: block;
   padding: 1rem;
   margin-bottom: -0.25rem;
 }
-div#main-container main#main-links section#portfolio a figure {
+div#main-container main#main-content section#portfolio a figure {
   padding-bottom: 1rem;
 }
-div#main-container main#main-links section#portfolio a figure img {
+div#main-container main#main-content section#portfolio a figure img {
   width: 200px;
   height: 100px;
   padding: 1rem;
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 10px;
 }
-div#main-container main#main-links section#portfolio a figure figcaption {
+div#main-container main#main-content section#portfolio a figure figcaption {
   max-width: 90%;
   margin: auto;
   padding: 1rem;
@@ -191,7 +191,7 @@ div#main-container main#main-links section#portfolio a figure figcaption {
   border-radius: 0.5rem;
 }
 @media screen and (min-width: 1200px) {
-  div#main-container main#main-links section#portfolio a figure figcaption:hover {
+  div#main-container main#main-content section#portfolio a figure figcaption:hover {
     transform: scale(1.5);
     padding: 0.5rem;
     background-color: rgb(30, 26, 26);
@@ -201,7 +201,7 @@ div#main-container main#main-links section#portfolio a figure figcaption {
   }
 }
 @media screen and (min-width: 576px) {
-  div#main-container main#main-links section#portfolio div {
+  div#main-container main#main-content section#portfolio div {
     display: flex;
     flex-direction: wrap;
     flex-wrap: wrap;
@@ -209,11 +209,11 @@ div#main-container main#main-links section#portfolio a figure figcaption {
     row-gap: 2rem;
     box-sizing: border-box;
   }
-  div#main-container main#main-links section#portfolio div > a {
+  div#main-container main#main-content section#portfolio div > a {
     width: 45%;
   }
 }
-div#main-container main#main-links section#code-examples {
+div#main-container main#main-content section#code-examples {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -223,41 +223,41 @@ div#main-container main#main-links section#code-examples {
   margin-bottom: 6rem;
   z-index: 0;
 }
-div#main-container main#main-links section#code-examples *:not(span) {
+div#main-container main#main-content section#code-examples *:not(span) {
   width: 200px;
   margin: auto;
 }
-div#main-container main#main-links section#code-examples div#problem-solution-selector * {
+div#main-container main#main-content section#code-examples div#problem-solution-selector * {
   color: white;
   font-size: 0.6rem;
   font-weight: 400;
   padding: 0.3rem;
 }
-div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container {
+div#main-container main#main-content section#code-examples div#problem-solution-selector div#solutions-tags-container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
 }
-div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag {
+div#main-container main#main-content section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag {
   display: inline-block;
   width: 3rem;
   text-align: center;
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 0.2rem;
 }
-div#main-container main#main-links section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag:hover {
+div#main-container main#main-content section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag:hover {
   background-color: rgb(30, 26, 26);
 }
-div#main-container main#main-links section#code-examples div#coming-soon-playlist-container img, div#main-container main#main-links section#code-examples div#coming-soon-playlist-container audio {
+div#main-container main#main-content section#code-examples div#coming-soon-playlist-container img, div#main-container main#main-content section#code-examples div#coming-soon-playlist-container audio {
   display: block;
 }
-div#main-container main#main-links section#code-examples div#coming-soon-playlist-container img {
+div#main-container main#main-content section#code-examples div#coming-soon-playlist-container img {
   margin: 1rem auto;
 }
-div#main-container main#main-links section#code-examples div#coming-soon-playlist-container audio {
+div#main-container main#main-content section#code-examples div#coming-soon-playlist-container audio {
   height: 1rem;
 }
-div#main-container main#main-links section#code-examples div#coming-soon-playlist-container span.construction-cone {
+div#main-container main#main-content section#code-examples div#coming-soon-playlist-container span.construction-cone {
   position: absolute;
   top: 0;
   right: 0;
@@ -265,7 +265,7 @@ div#main-container main#main-links section#code-examples div#coming-soon-playlis
   background-color: black;
 }
 @media screen and (min-width: 576px) {
-  div#main-container main#main-links section#code-examples {
+  div#main-container main#main-content section#code-examples {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -274,19 +274,19 @@ div#main-container main#main-links section#code-examples div#coming-soon-playlis
     padding: 2rem auto;
     padding: 1rem;
   }
-  div#main-container main#main-links section#code-examples > div {
+  div#main-container main#main-content section#code-examples > div {
     width: 45%;
   }
-  div#main-container main#main-links section#code-examples > div p {
+  div#main-container main#main-content section#code-examples > div p {
     width: 80%;
   }
 }
-div#main-container main#main-links section#scion-coalition-scheme {
+div#main-container main#main-content section#scion-coalition-scheme {
   display: flex;
   flex-direction: column;
   margin-bottom: 4rem;
 }
-div#main-container main#main-links section#scion-coalition-scheme h2 {
+div#main-container main#main-content section#scion-coalition-scheme h2 {
   display: block;
   width: 100%;
   margin-bottom: 1.5rem;
@@ -297,23 +297,23 @@ div#main-container main#main-links section#scion-coalition-scheme h2 {
   font-size: 3rem;
   margin-bottom: -1rem;
 }
-div#main-container main#main-links section#scion-coalition-scheme article {
+div#main-container main#main-content section#scion-coalition-scheme article {
   margin: 1rem;
   text-align: justify;
   padding: 0.5rem;
   font-font-weight: 300;
   font-size: 0.8rem;
 }
-div#main-container main#main-links section#scion-coalition-scheme article p:first-letter {
+div#main-container main#main-content section#scion-coalition-scheme article p:first-letter {
   font-family: "Madimi One", sans-serif;
   font-size: 200%;
   padding: 0;
   height: 5rem;
 }
-div#main-container main#main-links section#scion-coalition-scheme article footer {
+div#main-container main#main-content section#scion-coalition-scheme article footer {
   padding: 1rem 0;
 }
-div#main-container main#main-links section#scion-coalition-scheme article footer a {
+div#main-container main#main-content section#scion-coalition-scheme article footer a {
   padding: 0.5rem;
   display: inline-flex;
   gap: 1rem;
@@ -321,10 +321,10 @@ div#main-container main#main-links section#scion-coalition-scheme article footer
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   font-weight: 700;
 }
-div#main-container main#main-links section#scion-coalition-scheme article footer a span {
+div#main-container main#main-content section#scion-coalition-scheme article footer a span {
   flex-grow: 1;
 }
-div#main-container main#main-links section#scion-coalition-scheme article footer a img {
+div#main-container main#main-content section#scion-coalition-scheme article footer a img {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
@@ -430,9 +430,9 @@ body {
   background-color: #fbfcfa;
   padding: 1rem 0;
   font-family: "Spline Sans Mono", monospace;
+  font-size: 16px;
   font-font-optical-sizing: auto;
   font-font-weight: 300;
-  font-size: 16px;
   letter-spacing: 0.25px;
 }
 

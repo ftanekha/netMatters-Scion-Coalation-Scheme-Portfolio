@@ -1,36 +1,30 @@
 //fonts
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
-//partials
+//modules
 @import 
     "variables/index",
     "mixins/index", 
     "partials/index"
 ;
-// color palete
-//***netmatters
-// grey: rgb(102, 102, 102);
-// black: rgb(51, 54, 69);
-//###random
-//daissy: #fafafa 
-//powder: #fbfcfa 
+
 *{
     box-sizing: border-box;
     //reset
     margin: 0 auto;
     padding: 0px;
     text-decoration: none;
-    color: rgb(51, 54, 69);
+    color: $base-text-color;
 }
 body{
     width: 100%;
     background-color: #fbfcfa;
     padding: 1rem 0;
     font: {
-        family: "Spline Sans Mono", monospace;
+        family: $base-typeface;
+        size: $base-fontsize;
         font-optical-sizing: auto;
         font-weight: 300;
-        size: 16px;
     }
     letter-spacing: .25px;
 }
