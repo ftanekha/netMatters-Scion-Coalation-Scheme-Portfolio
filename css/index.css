@@ -53,8 +53,8 @@ header a.menu {
 }
 @media screen and (min-width: 922px) {
   header a {
-    width: 140px;
-    font-size: 100%;
+    width: 150px;
+    font-size: 70%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -371,8 +371,10 @@ div#main-container footer#main-footer section#enquiry-form form div input, div#m
 }
 div#main-container footer#main-footer section#enquiry-form form div textarea {
   margin: 0;
+  min-width: 100%;
   max-width: 100%;
   min-height: 10rem;
+  max-height: 10rem;
   height: 100%;
   color: black;
   border: 0;

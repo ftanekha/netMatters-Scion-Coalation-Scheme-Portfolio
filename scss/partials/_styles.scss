@@ -258,8 +258,10 @@ div#main-container{
                     }
                     textarea{
                         margin: 0;
+                        min-width: 100%;
                         max-width: 100%;
                         min-height: 10rem;
+                        max-height: 10rem;
                         height: 100%;
                         color: black;
                         border: 0;
