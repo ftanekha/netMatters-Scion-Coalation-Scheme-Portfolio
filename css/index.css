@@ -369,7 +369,7 @@ div#main-container footer#main-footer section#enquiry-form form div.contact-info
   outline: 0;
 }
 div#main-container footer#main-footer section#enquiry-form form div input, div#main-container footer#main-footer section#enquiry-form form div textarea {
-  padding: 0.25rem;
+  padding: 0.5rem;
   background-color: lightgray;
   color: black;
 }
