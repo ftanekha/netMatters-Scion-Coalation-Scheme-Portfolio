@@ -79,7 +79,8 @@
 //tags
 @mixin tag{
     display: inline-block;
-    width: 3rem;
+    width: 4rem;
+    padding: .25rem;
     text-align: center;
     box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
     border-radius: .2rem;
