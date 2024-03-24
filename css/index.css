@@ -150,7 +150,6 @@ div#main-container main#main-content section#about-me article.about-me big {
 div#main-container main#main-content section#about-me article.about-me footer {
   margin: 2rem;
   padding: 0.5rem;
-  background-color: lightgray;
 }
 div#main-container main#main-content section#about-me article.about-me footer small {
   font-size: 0.6rem;
@@ -175,10 +174,22 @@ div#main-container main#main-content section#about-me article#certification-link
 div#main-container main#main-content section#portfolio {
   margin: 1px auto 4rem;
 }
-div#main-container main#main-content section#portfolio p {
+div#main-container main#main-content section#portfolio p, div#main-container main#main-content section#portfolio dt, div#main-container main#main-content section#portfolio dl {
   font-size: 0.8rem;
 }
+div#main-container main#main-content section#portfolio dl dt {
+  padding: 0.5rem 0;
+  font-weight: 900;
+}
+div#main-container main#main-content section#portfolio dl p {
+  border-left: double 1rem lightgray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
 div#main-container main#main-content section#portfolio div#portfolio-list-of-projects {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   text-align: center;

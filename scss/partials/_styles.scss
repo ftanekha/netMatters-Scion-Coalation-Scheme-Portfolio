@@ -161,7 +161,6 @@ div#main-container{
                     footer{
                         margin: 2rem;
                         padding: .5rem;
-                        background-color: lightgray;
                         small{
                             font-size: .6rem;
                         }
@@ -189,10 +188,24 @@ div#main-container{
             &#portfolio{
                 margin: 1px auto 4rem;
                 // end-repeat
-                p{
+                p, dt, dl{
                     font-size: .8rem;
                 }
+                dl{
+                    dt{
+                        padding: .5rem 0;
+                        font-weight: 900;
+                    }
+                    p{
+                        border-left: double 1rem lightgray;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        margin: 1rem 0;
+                        padding-left: 1rem;
+                    }
+                }
                 div#portfolio-list-of-projects{
+                    margin-top: 3rem;
                     display: flex;
                     flex-direction: column;
                     text-align: center;
