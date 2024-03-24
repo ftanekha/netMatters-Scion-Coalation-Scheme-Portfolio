@@ -19,19 +19,9 @@ header section#banner strong, header section#banner em {
   font-style: normal;
   font-weight: 600;
 }
-header section#banner strong {
-  display: block;
-  text-align: right;
-  font-weight: 500;
-  font-size: 200%;
-}
 header section#banner em {
   text-shadow: red 0px 0.15px;
   margin: 1rem 0;
-}
-header section#banner span.waving-hand {
-  display: inline-block;
-  animation: wave 3s;
 }
 header section#banner p {
   text-align: right;
@@ -52,6 +42,7 @@ header section#banner div#see-my-portfolio span.icon-arrow-down {
   margin-top: 1rem;
   color: rgb(229, 54, 54);
   font-size: 7.5rem;
+  text-shadow: black 1px 1px 5px;
 }
 @media screen and (min-width: 768px) {
   header section#banner div#see-my-portfolio {
@@ -126,6 +117,43 @@ div#main-container main#main-content section {
   width: 100%;
   margin: 1px auto 2rem;
   padding: 1rem;
+}
+div#main-container main#main-content section#about-me article.about-me * {
+  text-align: center;
+}
+div#main-container main#main-content section#about-me article.about-me strong {
+  display: block;
+  padding-bottom: 1rem;
+  font-weight: 500;
+  font-size: 100%;
+}
+div#main-container main#main-content section#about-me article.about-me span.waving-hand {
+  display: inline-block;
+  animation: wave 3s;
+}
+div#main-container main#main-content section#about-me article.about-me p {
+  font-size: 0.8rem;
+  text-align: justify;
+}
+@media screen and (min-width: 922px) {
+  div#main-container main#main-content section#about-me article.about-me p {
+    text-align: center;
+  }
+}
+div#main-container main#main-content section#about-me article.about-me big {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+div#main-container main#main-content section#about-me article.about-me footer {
+  margin: 2rem;
+  padding: 0.5rem;
+  background-color: lightgray;
+}
+div#main-container main#main-content section#about-me article.about-me footer small {
+  font-size: 0.6rem;
 }
 div#main-container main#main-content section#about-me article#certification-links {
   margin: 5rem auto 1rem;
