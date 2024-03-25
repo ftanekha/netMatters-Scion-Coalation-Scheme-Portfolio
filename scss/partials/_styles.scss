@@ -1,36 +1,8 @@
-//MAIN NAVIGATION
-// nav{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     ul{
-//         list-style-type: none;
-//         display: flex;
-//         flex-direction: column;
-//         gap: .1rem;
-//         position: fixed;
-//         top: .3rem;
-//         left: .3rem;
-//         z-index: 5;
-//         //nav-items
-//         li{
-//             a{
-//                 @include main-nav-item;
-//             }
-//         }
-//         @media screen and (min-width: 1200px) {
-//             width: 150px;
-//             height: 100vh;
-//             background: black;
-//         }
-//     }
-// }
 header{
-    // background-color: green;
+    //BANNER
     section#banner{
         position: relative;
         width: 100%;
-        // min-height: 100vh;
         background-image:url("https://wallpapercave.com/wp/wp6397655.jpg");
         background-size: cover;
         background-position: right;
@@ -100,7 +72,7 @@ header{
         }
     }
 }
-// MAIN CONTENT
+// MAIN
 div#main-container{
     min-width:  280px;
     width: 80%;
@@ -108,7 +80,42 @@ div#main-container{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    //
+    // MAIN NAVIGATION
+    nav{
+        position: fixed;//to be changed to sticky with JS!!
+        top: 0;
+        left: 0;
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: .1rem;
+            z-index: 5;
+            padding-left: .3rem;
+            //nav-items
+            li{
+                padding-top: .2rem;
+                @include main-nav-item(1.2, 10%, 50%);
+            }
+            @media screen and (min-width: 1200px) {
+                width: 130px;
+                height: 100vh;
+                background: darken(rgb(115, 4, 4), 10%);
+                li{
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                    a:not(.menu){
+                        color: lighten(rgb(115, 4, 4), 80%);
+                        &:hover{
+                            color: darken(rgb(115, 4, 4), 50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //MAIN CONTENT
     main#main-content{
         display: flex;
         flex-direction: column;
@@ -187,7 +194,6 @@ div#main-container{
             //portfolio
             &#portfolio{
                 margin: 1px auto 4rem;
-                // end-repeat
                 p, dt, dl{
                     font-size: .8rem;
                 }

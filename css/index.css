@@ -85,6 +85,52 @@ div#main-container {
   display: flex;
   flex-direction: column;
 }
+div#main-container nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+div#main-container nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  z-index: 5;
+  padding-left: 0.3rem;
+}
+div#main-container nav ul li {
+  padding-top: 0.2rem;
+}
+div#main-container nav ul li:hover {
+  transform: scale(1.2);
+}
+div#main-container nav ul li a {
+  color: #420202;
+  font-size: 50%;
+}
+div#main-container nav ul li a.menu {
+  font-variant: small-caps;
+  font-size: large;
+}
+div#main-container nav ul li a:hover {
+  color: black;
+}
+@media screen and (min-width: 1200px) {
+  div#main-container nav ul {
+    width: 130px;
+    height: 100vh;
+    background: #420202;
+  }
+  div#main-container nav ul li:hover {
+    transform: scale(1.5);
+  }
+  div#main-container nav ul li a:not(.menu) {
+    color: white;
+  }
+  div#main-container nav ul li a:not(.menu):hover {
+    color: black;
+  }
+}
 div#main-container main#main-content {
   display: flex;
   flex-direction: column;

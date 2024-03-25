@@ -1,46 +1,18 @@
 //main-nav-item
-@mixin main-nav-item{
-    width: 70px;
-    opacity: .2;
-    margin: .2rem 0;
-    font-size: 50%;
-    border-radius: 3px;
+@mixin main-nav-item($scale-factor, $dark-color-factor, $dark-color-on-hover-factor){
     &:hover{
-        opacity: 1;
-        margin-left: .5rem;
-        font-weight: 800;
-        transform: scale(1.2);
+        transform: scale($scale-factor);
     }
-    &.menu{
-        background-color: transparent;
-        color: rgb(30, 26, 26);
-        width: 70px;
-        padding: .1rem;
-        padding-left: .4rem;
-        font: {
-            variant: small-caps;
-            size: 100%;
-            weight: 900;
-        }
-        opacity: .5;
-        letter-spacing: .5rem;
-    }
-    @media screen and (min-width: 576px) {
-        background: rgb(30, 26, 26);
-        opacity: .1;
-        padding: .25rem;
-        color: white;
+    a{
+        color: darken(rgb(115, 4, 4), $dark-color-factor);
         font-size: 50%;
-    }
-    @media screen and (min-width: 768px) {
-        width: 100px;
-        opacity: .7;
-        padding: 1rem;
-        font-size: 80%;
-    }
-    @media screen and (min-width: 922px) {
-        width: 140px;
-        font-size: 70%;
+        &.menu{
+            font-variant: small-caps;
+            font-size: large;
+        }
+        &:hover{
+            color: darken(rgb(115, 4, 4), $dark-color-on-hover-factor);
+        }
     }
 }
 // main-link
