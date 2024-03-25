@@ -13,6 +13,9 @@ header{
         :not(big, span, em){
             padding: 1rem;
         }
+        big{
+            font-size: 2rem;
+        }
         strong, em{
             display: block;
             font-style: normal;
@@ -225,8 +228,9 @@ div#main-container{
                             padding-bottom: 1rem;
                             img{
                                 width: 90%;
-                                max-width: 250px;
-                                height: 100px;
+                                min-width: 300px;
+                                max-width: 350px;
+                                height: 200px;
                                 padding: 1rem;
                                 box-shadow: inset $box-shadow;
                                 border-radius: 10px;
@@ -240,7 +244,7 @@ div#main-container{
                         display: flex;
                         flex-direction: row;
                         flex-wrap: wrap;
-                        row-gap: 2rem;
+                        column-gap: 3rem;
                         box-sizing: border-box;
                         & > a{
                             width: 50%;
@@ -396,6 +400,9 @@ div#main-container{
                         box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
                         color: $light-base-text;
                     }
+                }
+                @media screen and (min-width: 768px){
+                    width: 580px;
                 }
             }
         }

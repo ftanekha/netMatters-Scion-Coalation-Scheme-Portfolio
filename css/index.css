@@ -14,6 +14,9 @@ header section#banner * {
 header section#banner :not(big, span, em) {
   padding: 1rem;
 }
+header section#banner big {
+  font-size: 2rem;
+}
 header section#banner strong, header section#banner em {
   display: block;
   font-style: normal;
@@ -254,8 +257,9 @@ div#main-container main#main-content section#portfolio div#portfolio-list-of-pro
 }
 div#main-container main#main-content section#portfolio div#portfolio-list-of-projects a figure img {
   width: 90%;
-  max-width: 250px;
-  height: 100px;
+  min-width: 300px;
+  max-width: 350px;
+  height: 200px;
   padding: 1rem;
   box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
   border-radius: 10px;
@@ -283,7 +287,7 @@ div#main-container main#main-content section#portfolio div#portfolio-list-of-pro
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 2rem;
+    column-gap: 3rem;
     box-sizing: border-box;
   }
   div#main-container main#main-content section#portfolio div#portfolio-list-of-projects > a {
@@ -479,6 +483,11 @@ div#main-container footer#main-footer section#enquiry-form form button {
 div#main-container footer#main-footer section#enquiry-form form button:hover {
   box-shadow: inset #706161 0px 0px 0.2rem;
   color: #5e6480;
+}
+@media screen and (min-width: 768px) {
+  div#main-container footer#main-footer section#enquiry-form form {
+    width: 580px;
+  }
 }
 div#main-container section#media-links {
   margin: auto;
