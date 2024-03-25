@@ -135,6 +135,7 @@ div#main-container{
             padding: 1rem;
             //about-me
             &#about-me{
+                padding-left: 2rem;
                 article.about-me{
                     *{
                         text-align: center;
@@ -195,6 +196,7 @@ div#main-container{
             &#portfolio{
                 margin: 1px auto 4rem;
                 p, dt, dl{
+                    padding-left: 1.5rem;
                     font-size: .8rem;
                 }
                 dl{

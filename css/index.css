@@ -164,6 +164,9 @@ div#main-container main#main-content section {
   margin: 1px auto 2rem;
   padding: 1rem;
 }
+div#main-container main#main-content section#about-me {
+  padding-left: 2rem;
+}
 div#main-container main#main-content section#about-me article.about-me * {
   text-align: center;
 }
@@ -221,6 +224,7 @@ div#main-container main#main-content section#portfolio {
   margin: 1px auto 4rem;
 }
 div#main-container main#main-content section#portfolio p, div#main-container main#main-content section#portfolio dt, div#main-container main#main-content section#portfolio dl {
+  padding-left: 1.5rem;
   font-size: 0.8rem;
 }
 div#main-container main#main-content section#portfolio dl dt {
