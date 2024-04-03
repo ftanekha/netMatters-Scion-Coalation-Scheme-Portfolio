@@ -82,14 +82,28 @@ div#main-container{
     // MAIN NAVIGATION
     nav{
         display: none;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 922px) {
             display: block;
             position: fixed;//to be changed to sticky with JS!!
             top: 0;
             left: 0;
+            padding-top: 0;
+            span.icon-menu{
+                display: inline-block;
+                box-sizing: border-box;
+                color: rgb(115, 4, 4);
+                background-color: white;
+                height: 4rem;
+                width: 4rem;
+                margin: .5rem;
+                border-radius: 3px;
+                font-size: 4rem;
+                font-weight: 100;
+            }
             ul{
+                display: none;
                 list-style-type: none;
-                display: flex;
+                // display: flex;
                 flex-direction: column;
                 gap: .1rem;
                 z-index: 5;

@@ -79,16 +79,29 @@ div#main-container {
 div#main-container nav {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 922px) {
   div#main-container nav {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
+    padding-top: 0;
+  }
+  div#main-container nav span.icon-menu {
+    display: inline-block;
+    box-sizing: border-box;
+    color: rgb(115, 4, 4);
+    background-color: white;
+    height: 4rem;
+    width: 4rem;
+    margin: 0.5rem;
+    border-radius: 3px;
+    font-size: 4rem;
+    font-weight: 100;
   }
   div#main-container nav ul {
+    display: none;
     list-style-type: none;
-    display: flex;
     flex-direction: column;
     gap: 0.1rem;
     z-index: 5;
@@ -120,7 +133,7 @@ div#main-container nav {
     padding-top: 2rem;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1020px) {
+@media screen and (min-width: 922px) and (min-width: 1020px) {
   div#main-container nav ul {
     width: 130px;
     height: 100vh;
@@ -575,7 +588,7 @@ div#main-container section#media-links div.sm-icons-container a:hover {
 body {
   width: 100%;
   background-color: #fbfcfa;
-  padding: 0 0 0.5rem 0;
+  padding: 0 0 0.25rem 0;
   font-family: "Spline Sans Mono", monospace;
   font-size: 16px;
   font-font-optical-sizing: auto;
