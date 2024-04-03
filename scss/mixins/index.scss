@@ -2,9 +2,11 @@
 @mixin main-nav-item($scale-factor, $light-color-factor, $light-color-on-hover-factor){
     a{
         // color: lighten(rgb(115, 4, 4), $light-color-factor);
-        color: $netmatters-black;
+        color: rgb(115, 4, 4);
         font-size: 75%;
         font-weight: 500;
+        text-shadow: white 2px 2px 5px,
+            white -2px -2px 5px;
         &.menu{
             font-variant: small-caps;
             font-size: large;

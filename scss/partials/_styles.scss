@@ -81,7 +81,8 @@ div#main-container{
     flex-direction: column;
     // MAIN NAVIGATION
     nav{
-        display: none;
+        display: none;  
+        padding-left: 1rem;
         @media screen and (min-width: 922px) {
             display: block;
             position: fixed;//to be changed to sticky with JS!!
@@ -103,30 +104,24 @@ div#main-container{
             ul{
                 display: none;
                 list-style-type: none;
-                // display: flex;
                 flex-direction: column;
                 gap: .1rem;
                 z-index: 5;
-                padding-left: .3rem;
                 //nav-items
                 li{
-                    &:first-child{
-                        padding-top: .5rem;
-                    }
-                    &:not(:first-child){
-                        padding-top: 2rem;
-                    }
+
+                    margin-left: .75rem;
+                    padding-top: 2rem;
                     @include main-nav-item(1.2, 10%, 50%);
                 }
                 li:not(:first-child){
                     padding-top: 2rem;
                 }
-                @media screen and (min-width: 1020px) {
+                @media screen and (min-width: 1200px) {
                     width: 130px;
                     height: 100vh;
+                    padding-right: -1rem;
                     box-shadow: inset lighten(rgb(30, 26, 26), 20%) 0px 0px 2.5rem;             
-                    // li{
-                    // }
                 }
             }
         }
