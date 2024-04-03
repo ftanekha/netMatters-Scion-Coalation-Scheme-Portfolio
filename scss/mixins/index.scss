@@ -1,17 +1,20 @@
 //main-nav-item
-@mixin main-nav-item($scale-factor, $dark-color-factor, $dark-color-on-hover-factor){
-    &:hover{
-        transform: scale($scale-factor);
-    }
+@mixin main-nav-item($scale-factor, $light-color-factor, $light-color-on-hover-factor){
     a{
-        color: darken(rgb(115, 4, 4), $dark-color-factor);
-        font-size: 50%;
+        // color: lighten(rgb(115, 4, 4), $light-color-factor);
+        color: $netmatters-black;
+        font-size: 75%;
+        font-weight: 500;
         &.menu{
             font-variant: small-caps;
             font-size: large;
+            color: $dark-base-text;
+            text-decoration: underline;
         }
-        &:hover{
-            color: darken(rgb(115, 4, 4), $dark-color-on-hover-factor);
+        &:not(.menu):hover{
+            color: darken(rgb(115, 4, 4), $light-color-on-hover-factor);
+            text-shadow: black 1px 1px 5px;
+            font-size: 90%;
         }
     }
 }
@@ -54,10 +57,15 @@
     width: 4rem;
     padding: .25rem;
     text-align: center;
-    box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+    background-color: rgb(210, 198, 198);
+    // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+    box-shadow: inset lighten(rgb(30, 26, 26), 20%) 0px 0px .1rem;  
     border-radius: .2rem;
+    color: black;
+    font-weight: 700;
     &:hover{
         background-color: rgb(30, 26, 26);
+        color: white;
     }
 }
 //construction-cone
@@ -96,9 +104,13 @@
         padding: .5rem;
         display: inline-flex;
         gap: 1rem;
-        border: solid .1px rgb(30, 26, 26);
-        box-shadow: inset $box-shadow;
+        // border: solid .1px rgb(30, 26, 26);
+        box-shadow: inset rgb(210, 198, 198) 0px 0px 3rem;
+        // box-shadow: inset lighten(rgb(30, 26, 26), 20%) 0px 0px .1rem;   
         font-weight: 700;
+        &:hover{
+            box-shadow: inset rgb(72, 67, 67) 0px 0px 1.5rem;
+        }
         span{
             flex-grow: 1;
         } 

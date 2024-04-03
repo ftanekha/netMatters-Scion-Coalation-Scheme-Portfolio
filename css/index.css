@@ -3,12 +3,19 @@
 header section#banner {
   position: relative;
   width: 100%;
-  background-image: url("https://wallpapercave.com/wp/wp6397655.jpg");
-  background-size: cover;
-  background-position: right;
+  background-image: url("../../assets/images/Training 11.jpg");
+}
+@media screen and (max-width: 400px) {
+  header section#banner {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 }
 header section#banner * {
   color: white;
+  text-shadow: rgb(229, 54, 54) 1px 1px 2px;
   font-size: 0.85rem;
 }
 header section#banner :not(big, span, em) {
@@ -32,20 +39,44 @@ header section#banner p {
   text-shadow: black 1px 1px 5px;
 }
 header section#banner div#see-my-portfolio {
-  display: flex;
-  flex-direction: column;
-  float: right;
-  margin-right: -1rem;
+  width: 70%;
+  margin-top: 3rem auto;
+  text-align: center;
+  padding-top: 7rem;
 }
 header section#banner div#see-my-portfolio span:nth-of-type(1) {
   margin-right: 1rem;
 }
-header section#banner div#see-my-portfolio span.icon-arrow-down {
-  display: inline-block;
-  margin-top: 1rem;
-  color: rgb(229, 54, 54);
+header section#banner div#see-my-portfolio a {
+  display: block;
+  height: 12.5rem;
+}
+header section#banner div#see-my-portfolio a span.icon-arrow-down {
+  display: block;
+  margin-top: 2rem;
+  color: rgb(115, 4, 4);
   font-size: 7.5rem;
   text-shadow: black 1px 1px 5px;
+}
+header section#banner div#see-my-portfolio a span.icon-arrow-down:hover {
+  color: lightgray;
+  animation-name: arrow-scale-up;
+  animation-duration: 2s;
+}
+@media screen and (min-width: 400px) {
+  header section#banner div#see-my-portfolio span:nth-of-type(1) {
+    margin-right: 6rem;
+  }
+  header section#banner div#see-my-portfolio span.icon-arrow-down {
+    display: inline-block;
+    margin-top: 1rem;
+    color: rgb(115, 4, 4);
+    font-size: 7.5rem;
+    text-shadow: black 1px 1px 5px;
+  }
+  header section#banner div#see-my-portfolio span.icon-arrow-down:hover {
+    color: lightgray;
+  }
 }
 @media screen and (min-width: 768px) {
   header section#banner div#see-my-portfolio {
@@ -89,49 +120,54 @@ div#main-container {
   flex-direction: column;
 }
 div#main-container nav {
-  position: fixed;
-  top: 0;
-  left: 0;
+  display: none;
 }
-div#main-container nav ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  z-index: 5;
-  padding-left: 0.3rem;
-}
-div#main-container nav ul li {
-  padding-top: 0.2rem;
-}
-div#main-container nav ul li:hover {
-  transform: scale(1.2);
-}
-div#main-container nav ul li a {
-  color: #420202;
-  font-size: 50%;
-}
-div#main-container nav ul li a.menu {
-  font-variant: small-caps;
-  font-size: large;
-}
-div#main-container nav ul li a:hover {
-  color: black;
-}
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
+  div#main-container nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
   div#main-container nav ul {
-    width: 130px;
-    height: 100vh;
-    background: #420202;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    z-index: 5;
+    padding-left: 0.3rem;
   }
-  div#main-container nav ul li:hover {
-    transform: scale(1.5);
+  div#main-container nav ul li:first-child {
+    padding-top: 0.5rem;
   }
-  div#main-container nav ul li a:not(.menu) {
-    color: white;
+  div#main-container nav ul li:not(:first-child) {
+    padding-top: 2rem;
+  }
+  div#main-container nav ul li a {
+    color: rgb(51, 54, 69);
+    font-size: 75%;
+    font-weight: 500;
+  }
+  div#main-container nav ul li a.menu {
+    font-variant: small-caps;
+    font-size: large;
+    color: black;
+    text-decoration: underline;
   }
   div#main-container nav ul li a:not(.menu):hover {
     color: black;
+    text-shadow: black 1px 1px 5px;
+    font-size: 90%;
+  }
+  div#main-container nav ul li:not(:first-child) {
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1020px) {
+  div#main-container nav ul {
+    width: 130px;
+    height: 100vh;
+    box-shadow: inset #554949 0px 0px 2.5rem;
   }
 }
 div#main-container main#main-content {
@@ -235,7 +271,7 @@ div#main-container main#main-content section#portfolio dl dt {
   font-weight: 900;
 }
 div#main-container main#main-content section#portfolio dl p {
-  border-left: double 1rem lightgray;
+  border-left: double 1rem rgb(134, 122, 122);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   margin: 1rem 0;
@@ -261,8 +297,11 @@ div#main-container main#main-content section#portfolio div#portfolio-list-of-pro
   max-width: 350px;
   height: 200px;
   padding: 1rem;
-  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  box-shadow: inset rgb(210, 198, 198) 0px 0px 1rem;
   border-radius: 10px;
+}
+div#main-container main#main-content section#portfolio div#portfolio-list-of-projects a figure img:hover {
+  transform: scale(1.01);
 }
 div#main-container main#main-content section#portfolio div#portfolio-list-of-projects a figure figcaption {
   max-width: 90%;
@@ -333,11 +372,15 @@ div#main-container main#main-content section#code-examples div#problem-solution-
   width: 4rem;
   padding: 0.25rem;
   text-align: center;
-  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  background-color: rgb(210, 198, 198);
+  box-shadow: inset #554949 0px 0px 0.1rem;
   border-radius: 0.2rem;
+  color: black;
+  font-weight: 700;
 }
 div#main-container main#main-content section#code-examples div#problem-solution-selector div#solutions-tags-container span.tag:hover {
   background-color: rgb(30, 26, 26);
+  color: white;
 }
 div#main-container main#main-content section#code-examples div#coming-soon-playlist-container img, div#main-container main#main-content section#code-examples div#coming-soon-playlist-container audio {
   display: block;
@@ -400,9 +443,11 @@ div#main-container main#main-content section#scion-coalition-scheme article foot
   padding: 0.5rem;
   display: inline-flex;
   gap: 1rem;
-  border: solid 0.1px rgb(30, 26, 26);
-  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  box-shadow: inset rgb(210, 198, 198) 0px 0px 3rem;
   font-weight: 700;
+}
+div#main-container main#main-content section#scion-coalition-scheme article footer a:hover {
+  box-shadow: inset rgb(72, 67, 67) 0px 0px 1.5rem;
 }
 div#main-container main#main-content section#scion-coalition-scheme article footer a span {
   flex-grow: 1;
@@ -460,6 +505,9 @@ div#main-container footer#main-footer section#enquiry-form form div input, div#m
   background-color: lightgray;
   color: black;
 }
+div#main-container footer#main-footer section#enquiry-form form div input:focus, div#main-container footer#main-footer section#enquiry-form form div textarea:focus {
+  background-color: #ededed;
+}
 div#main-container footer#main-footer section#enquiry-form form div textarea {
   margin: 0;
   min-width: 100%;
@@ -475,7 +523,7 @@ div#main-container footer#main-footer section#enquiry-form form button {
   width: 100%;
   padding: 0.25rem;
   border: solid 0.1px rgb(30, 26, 26);
-  box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
+  box-shadow: inset rgb(210, 198, 198) 0px 0px 1rem;
   border-radius: 3px;
   font-variant: small-caps;
   font-weight: 900;
@@ -539,6 +587,11 @@ div#main-container section#media-links div.sm-icons-container a:hover {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes arrow-scale-up {
+  100% {
+    font-size: 10rem;
   }
 }
 * {
