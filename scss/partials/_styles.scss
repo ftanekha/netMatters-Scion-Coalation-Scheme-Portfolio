@@ -3,7 +3,7 @@ header{
     section#banner{
         position: relative;
         width: 100%;
-        background-image:url("../../assets/images/Training\ 11.jpg");
+        background-image:url("../assets/images/go.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -12,13 +12,13 @@ header{
             color: white;
             text-shadow: rgb(229, 54, 54) 0px 2px 3px, 
             black 0px -1px 5px;
-            font-size: 1rem;
+            font-size: .75rem;
         }
         :not(big, span, em){
             padding: 1rem;
         }
         big{
-            font-size: 1.6rem;
+            font-size: 1.25rem;
         }
         strong, em{
             display: block;
@@ -29,8 +29,7 @@ header{
             margin: 1rem 0;
         }
         p:first-child{
-            width: 100%;
-            white-space: nowrap;
+            text-align: center;
         }
         p:not(:first-child){
             text-align: right;
@@ -56,18 +55,15 @@ header{
                     text-shadow: black 1px 1px 5px;
                     &:hover{
                         color: lightgray;
-                        animation-name: arrow-scale-up;
+                        animation-name: arrow-pulse;
                         animation-duration: 2s;
                     }
                 }
             }
         }
-        @media screen and (min-width: 400px){
+        @media screen and (min-width: 768px){
             big{
                 font-size: 3rem;
-            }
-            p:first-child{
-                text-align: right;
             }
             *{
                 font-size: 2rem;
