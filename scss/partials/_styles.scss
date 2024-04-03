@@ -100,6 +100,9 @@ div#main-container{
                 border-radius: 3px;
                 font-size: 4rem;
                 font-weight: 100;
+                &:hover{
+                    color: $light-base-text;
+                }
             }
             ul{
                 display: none;
@@ -109,7 +112,6 @@ div#main-container{
                 z-index: 5;
                 //nav-items
                 li{
-
                     margin-left: .75rem;
                     padding-top: 2rem;
                     @include main-nav-item(1.2, 10%, 50%);
