@@ -596,7 +596,7 @@ body header section#main-nav-container nav span.icon-menu {
   position: relative;
   box-sizing: border-box;
   color: rgb(115, 4, 4);
-  background-color: white;
+  background-color: black;
   height: 4rem;
   width: 4rem;
   margin: 0.5rem;
@@ -658,6 +658,7 @@ body header section#main-nav-container nav ul li.item-homepage a {
 @media screen and (min-width: 922px) {
   body header section#main-nav-container nav span.icon-menu {
     display: inline-block;
+    margin: 0 0 0 0.5rem;
   }
 }
 
