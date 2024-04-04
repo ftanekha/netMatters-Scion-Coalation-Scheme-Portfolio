@@ -42,40 +42,42 @@ body{
                     box-sizing: border-box;
                     color: rgb(115, 4, 4);
                     background-color: black;
-                    height: 4rem;
-                    width: 4rem;
+                    height: 3rem;
+                    width: 3rem;
                     margin: .5rem;
                     border-radius: 3px;
-                    font-size: 4rem;
+                    font-size: 3rem;
                     font-weight: 100;
                 }
                 //nav-items
                 ul{
                     display: none;
                     li{
-                        margin-left: .75rem;
-                        padding: .2rem 0;
+                        margin-left: .5rem;
+                        padding: .2rem 0 .2rem .2rem;
                         @include main-nav-item(1.2, 10%, 50%);
-                        @media screen and (max-width: 768px){
+                        @media screen and (max-width: 1025px){
                             background: rgb(115, 4, 4);
                             width: 110px;
                             height: 2rem;
-                            padding-left: 1rem;
                         }
                     }
                     li.item-homepage{
                         a{
                             display: inline-block;
                             width: 4rem;
-                            margin-left: -.25rem;
+                            border-radius: .2rem;
                             height: 1.5rem;
-                            padding: .2rem;
-                            text-align: center;
+                            text-decoration: underline;
+                            text-decoration-thickness: .25rem;
+                            text-decoration-color: black;
                             font-variant: small-caps;
                             font-size: 80%;
                             letter-spacing: 2px;
-                            background-color: black;
-                            color: white;
+                            color: rgb(115, 4, 4);
+                            @media screen and (max-width: 1025px){
+                                color: white;
+                            }
                         }
                     }
                 }
