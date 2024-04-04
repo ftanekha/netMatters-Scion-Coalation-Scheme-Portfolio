@@ -1,8 +1,10 @@
 header{
+    position: relative;
     //BANNER
     section#banner{
         position: relative;
         width: 100%;
+        min-height: 100vh;
         background-image:url("../assets/images/go.jpg");
         background-size: cover;
         background-position: center;
@@ -14,7 +16,7 @@ header{
             black 0px -1px 5px;
             font-size: .75rem;
         }
-        :not(big, span, em){
+        :not(big, span, em, p:first-child){
             padding: 1rem;
         }
         big{
@@ -28,8 +30,14 @@ header{
         em{
             margin: 1rem 0;
         }
+        //first p in section#banner
         p:first-child{
             text-align: center;
+            margin-top: -1rem;
+            // next p
+            & + p{
+                margin-top: 3rem;
+            }
         }
         p:not(:first-child){
             text-align: right;
@@ -71,368 +79,333 @@ header{
         }
     }
 }
-// MAIN
-div#main-container{
-    min-width:  280px;
-    width: 80%;
-    //sticky footer effect
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    // MAIN NAVIGATION
-    nav{
-        display: none;  
-        padding-left: 1rem;
-        @media screen and (min-width: 922px) {
-            display: block;
-            position: fixed;//to be changed to sticky with JS!!
-            top: 0;
-            left: 0;
-            padding-top: 0;
-            span.icon-menu{
-                display: inline-block;
-                box-sizing: border-box;
-                color: rgb(115, 4, 4);
-                background-color: white;
-                height: 4rem;
-                width: 4rem;
-                margin: .5rem;
-                border-radius: 3px;
-                font-size: 4rem;
-                font-weight: 100;
-                &:hover{
-                    color: $light-base-text;
-                }
-            }
-            ul{
-                display: none;
-                list-style-type: none;
-                flex-direction: column;
-                gap: .1rem;
-                z-index: 5;
-                //nav-items
-                li{
-                    margin-left: .75rem;
-                    padding-top: 2rem;
-                    @include main-nav-item(1.2, 10%, 50%);
-                }
-                li:not(:first-child){
-                    padding-top: 2rem;
-                }
-                @media screen and (min-width: 1200px) {
-                    width: 130px;
-                    height: 100vh;
-                    padding-right: -1rem;
-                    box-shadow: inset lighten(rgb(30, 26, 26), 20%) 0px 0px 2.5rem;             
-                }
-            }
-        }
-    }
-    //MAIN CONTENT
-    main#main-content{
+//MAIN CONTENT
+section{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem 10% 0px;
+    margin: auto;
+    &#about-me{
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
-        h2{  
-            @include section-heading;
-        }
-        section.hero-section{
-            min-height: 70vh;
-            h2{  
-                @include section-heading;
+        @include section-heading;
+        article.about-me{
+            flex: 1;
+            *{
+                text-align: center;
             }
-        }
-        section{
-            width: 100%;
-            margin: 1px auto 2rem;
-            padding: 1rem;
-            //about-me
-            &#about-me{
-                padding-left: 2rem;
-                article.about-me{
-                    *{
-                        text-align: center;
-                    }
-                    strong{
-                        display: block;
-                        padding-bottom: 1rem;
-                        font: {
-                            weight: 500;
-                            size: 100%;
-                        }
-                    }
-                    span.waving-hand{
-                        display: inline-block;
-                        animation: wave 3s;
-                    }
-                    p{
-                        font-size: .8rem;
-                        text-align: justify;
-                        @media screen and (min-width: 922px){
-                            text-align: center;
-                        }
-                    }
-                    big{
-                        display: block;
-                        font-size: .9rem;
-                        font-weight: 500;
-                        text-align: center;
-                        padding: 1rem;
-                    }
-                    footer{
-                        margin: 2rem;
-                        padding: .5rem;
-                        small{
-                            font-size: .6rem;
-                        }
-                    }
-                }
-                article#certification-links{
-                    margin: 5rem auto 1rem;
-                    display: flex;
-                    flex-direction: column;
-                    p{
-                        font-size: 50%;
-                    }
-                    a{
-                        display: inline-block;
-                        text-align: center;
-                        padding: .5rem;
-                        img{
-                            width: 1rem; 
-                            height: 1rem;
-                        }
-                    }
+            strong{
+                display: block;
+                margin: 2rem auto;
+                padding-bottom: 1rem;
+                font: {
+                    weight: 500;
+                    size: 100%;
                 }
             }
-            //portfolio
-            &#portfolio{
-                margin: 1px auto 4rem;
-                p, dt, dl{
-                    padding-left: 1.5rem;
+            span.waving-hand{
+                display: inline-block;
+                animation: wave 5s;
+            }
+            p{
+                font-size: .8rem;
+                text-align: justify;
+                @media screen and (min-width: 922px){
+                    text-align: center;
+                }
+            }
+            big{
+                display: block;
+                font-size: .9rem;
+                font-weight: 500;
+                text-align: center;
+                padding: 2rem;
+            }
+            footer{
+                margin: 2rem auto 0;
+                padding: .5rem;
+                small{
                     font-size: .8rem;
                 }
-                dl{
-                    dt{
-                        padding: .5rem 0;
-                        font-weight: 900;
-                    }
-                    p{
-                        border-left: double 1rem rgb(134, 122, 122);
-                        border-top-left-radius: 5px;
-                        border-bottom-left-radius: 5px;
-                        margin: 1rem 0;
-                        padding-left: 1rem;
-                    }
+            }
+            @media screen and (min-width: 768px){
+                big, strong{
+                    font-size: 150%;
                 }
-                div#portfolio-list-of-projects{
-                    margin-top: 3rem;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
-                    a{
-                        display: block;
-                        padding: 1rem;
-                        margin-bottom: -.25rem;
-                        figure{
-                            padding-bottom: 1rem;
-                            img{
-                                width: 90%;
-                                min-width: 300px;
-                                max-width: 350px;
-                                height: 200px;
-                                padding: 1rem;
-                                box-shadow: inset $box-shadow;
-                                border-radius: 10px;
-                                &:hover{
-                                    transform: scale(1.01);
-                                }
-                            }
-                            figcaption{
-                                @include portfolio-item-figcaption;
-                            }
-                        }
-                    }
-                    @media screen and (min-width: 576px){
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        column-gap: 3rem;
-                        box-sizing: border-box;
-                        & > a{
-                            width: 50%;
-                        }
-                    }
-                    @media screen and (min-width: 922px){
-                        & > a{
-                            width: 30%;
-                        }
+                p{
+                    font-size: 100%;
+                }
+                footer{
+                    padding-top: 3rem;
+                    small{
+                        font-size: 1rem;
+                        color: $light-base-text;
                     }
                 }
             }
-            //code-examples
-            &#code-examples{
-                width: 90%;
-                margin: 0 auto;
-                display: flex;
-                flex-direction: column;
-                // construction orange
-                background-color: rgb(248, 116, 49);
-                position: relative;
-                margin-bottom: 6rem;
-                z-index: 0;
-                //everything but span
-                & *:not(span){
-                    width: 200px;
-                }
-                div#problem-solution-selector{
-                    *{
-                        color: white;
-                        font-size: .6rem;
-                        font-weight: 400;
-                    }
-                    p{
-                        padding: 1.5rem 0;
-                        font-size: .75rem;
-                        text-align: justify;
-                    }
-                    div#solutions-tags-container{
-                        padding: 1rem 0;
-                        display: flex;
-                        flex-wrap: wrap;
-                        gap: .25rem;
-                        span.tag{
-                            @include tag;
-                        }
-                    }
-                }
-                div#coming-soon-playlist-container{
-                    img, audio{
-                        display: block;
-                    }
-                    img{
-                        margin: 1rem auto;
-                    }
-                    audio{
-                        height: 1rem;
-                    }
-                    span.construction-cone{
-                        @include construction-cone;
-                    }
-                }
-                @media screen and (min-width: 768px){
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr;
-                    gap: 5%;
-                    align-items: center;
-                }
+        }
+        article#certification-links{
+            margin: 2rem auto 1rem;
+            display: flex;
+            flex-direction: column;
+            p{
+                font-size: .9rem;
             }
-            // Scion Coalition Scheme
-            &#scion-coalition-scheme{
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 4rem;
-                h2{  
-                    @include section-heading;
-                    margin-bottom: -1rem;
-                }
-                article{
-                    @include scs-article;
+            a{
+                display: inline-block;
+                text-align: center;
+                padding: .5rem;
+                img{
+                    width: 2rem; 
+                    height: 2rem;
                 }
             }
         }
     }
-    // FOOTER
-    footer#main-footer{
-        h2{  
-            @include section-heading;
-            margin-bottom: -1rem;
+    &#portfolio{
+        display: flex;
+        flex-direction: column;
+        @include section-heading;
+        h2 + p{
+            margin-bottom: 2rem;
         }
-        // ENQUIRY FORM
-        section#enquiry-form{
-            margin: 3rem 0;
-            form{
-                width: 290px;
-                display: flex;
-                flex-direction: column;
-                row-gap: 1rem;
-                div{
-                    width: 100%;
-                    padding: 0;
-                    &.contact-info-detail{
-                        padding: 0;
-                        display: flex;
-                        box-sizing: border-box;
-                        label{
-                            width: 35%;
-                            padding: .2rem;
-                            color: $light-base-text;
-                            align-self: center;
-                            font: {
-                                size: 80%;
-                                weight: 500;
-                            }
-                        }
-                        input{
-                            flex-grow: 1;
-                            margin: .2rem 0;
-                            border: 0;
-                            outline: 0;
-                        }
-                    }
-                    input, textarea{
-                        padding: .5rem;
-                        background-color: lightgray;
-                        color: $dark-base-text;
-                        &:focus{
-                            background-color: lighten(lightgray, 10%);
-                        }
-                    }
-                    textarea{
-                        margin: 0;
-                        min-width: 100%;
+        p, dt, dl{
+            font-size: .8rem;
+            text-align: left;
+            margin-left: 0;
+        }
+        dl{
+            dt{
+                padding: .5rem 0;
+                font-weight: 900;
+            }
+            p{
+                border-left: double 1rem rgb(115, 4, 4);
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin: 1rem 0;
+                padding-left: 1rem;
+            }
+        }
+        div#portfolio-list-of-projects{
+            box-sizing: border-box;
+            margin: 2rem 0 0 -1.5rem;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            a{
+                display: block;
+                // padding: 1rem;
+                margin-bottom: -.25rem;
+                figure{
+                    padding: 0 0 1rem 0;
+                    min-width: 350px;
+                    img{
+                        width: 90%;
                         max-width: 100%;
-                        min-height: 10rem;
-                        max-height: 10rem;
-                        height: 100%;
-                        color: black;
+                        height: 200px;
+                        padding: 1rem;
+                        box-shadow: inset $box-shadow;
+                        border-radius: 10px;
+                        &:hover{
+                            transform: scale(1.01);
+                        }
+                    }
+                    figcaption{
+                        @include portfolio-item-figcaption;
+                    }
+                }
+            }
+            @media screen and (min-width: 576px){
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 3rem;
+                justify-content: space-between;
+                & > a{
+                    width: 70%;
+                }
+            }
+            @media screen and (min-width: 922px){
+                & > a{
+                    width: 30%;
+                }
+            }
+        }
+    }
+    &#code-examples{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 6rem;
+        @include section-heading;
+        h2{
+            margin-top: 5rem;
+        }
+        //everything but span
+        div#code-examples-main-container{
+            display: flex;
+            flex-direction: column;
+            & *:not(span){
+                width: 100%;
+            }
+            & > div{
+                flex-grow: 1;
+            }
+            div#problem-solution-selector{
+                *{
+                    font-size: .6rem;
+                    font-weight: 400;
+                }
+                p{
+                    padding: 0 .5rem;
+                    font-size: .75rem;
+                    text-align: justify;
+                }
+                div#solutions-tags-container{
+                    padding: 2rem 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: .25rem;
+                    span.tag{
+                        @include tag;
+                    }
+                }
+            }
+            div#coming-soon-playlist-container{
+                // position: relative;
+                img, audio{
+                    display: block;
+                }
+                img{
+                    margin: 1rem auto;
+                }
+                audio{
+                    height: 1rem;
+                }
+                span.construction-cone{
+                    @include construction-cone;
+                }
+            }
+            @media screen and (min-width: 992px){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr;
+                column-gap: 10%;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        
+    }
+    &#scion-coalition-scheme{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4rem;
+        height: 100vh;
+        @include section-heading;
+        article{
+            flex: 1;
+            @include scs-article;
+        }
+    }
+}
+// FOOTER
+footer#main-footer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    @include section-heading;
+    // ENQUIRY FORM
+    section#enquiry-form{
+        margin: 0;
+        padding: 3rem 0;
+        form{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            div{
+                width: 100%;
+                padding: 0;
+                &.contact-info-detail{
+                    padding: 0;
+                    display: flex;
+                    box-sizing: border-box;
+                    label{
+                        width: 35%;
+                        padding: .2rem;
+                        color: $light-base-text;
+                        align-self: center;
+                        font: {
+                            size: 80%;
+                            weight: 500;
+                        }
+                    }
+                    input{
+                        flex-grow: 1;
+                        margin: .2rem 0;
                         border: 0;
                         outline: 0;
                     }
                 }
-                button{
-                    width: 100%;
-                    padding: .25rem;
-                    border: solid .1px rgb(30, 26, 26);
-                    box-shadow: inset $box-shadow;
-                    border-radius: 3px;
-                    font: {
-                        variant: small-caps;
-                        weight: 900;
-                    }
-                    &:hover{
-                        box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
-                        color: $light-base-text;
+                input, textarea{
+                    padding: .5rem;
+                    background-color: lightgray;
+                    color: $dark-base-text;
+                    &:focus{
+                        background-color: lighten(lightgray, 10%);
                     }
                 }
-                @media screen and (min-width: 768px){
-                    width: 580px;
+                textarea{
+                    margin: 0;
+                    min-width: 100%;
+                    max-width: 100%;
+                    min-height: 10rem;
+                    max-height: 10rem;
+                    height: 100%;
+                    color: black;
+                    border: 0;
+                    outline: 0;
+                }
+            }
+            button{
+                margin-top: 2rem;
+                width: 100%;
+                padding: .25rem;
+                border: solid .1px rgb(30, 26, 26);
+                box-shadow: inset $box-shadow;
+                border-radius: 3px;
+                font: {
+                    variant: small-caps;
+                    weight: 900;
+                }
+                &:hover{
+                    box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
+                    color: $light-base-text;
+                }
+            }
+            @media screen and (min-width: 768px){
+                width: 610px;
+                input{
+                    width: 80%;
                 }
             }
         }
     }
-    //SM LINKS
-    section#media-links{
-        margin: auto;
-        padding-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        div.sm-icons-container{
-            @include sm-icon;
-        }
-        //stifky footer effect
-        flex-shrink: 0;
+}
+section#enquiry-form, button{
+    flex: 1;
+}
+//SM LINKS
+section#media-links{
+    margin: 0 auto 1rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    div.sm-icons-container{
+        @include sm-icon;
     }
 }

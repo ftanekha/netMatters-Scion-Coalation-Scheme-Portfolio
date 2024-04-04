@@ -1,36 +1,41 @@
 //main-nav-item
 @mixin main-nav-item($scale-factor, $light-color-factor, $light-color-on-hover-factor){
     a{
-        // color: lighten(rgb(115, 4, 4), $light-color-factor);
-        color: rgb(115, 4, 4);
-        font-size: 75%;
-        font-weight: 500;
-        text-shadow: white 2px 2px 5px,
-            white -2px -2px 5px;
-        &.menu{
-            font-variant: small-caps;
-            font-size: large;
-            color: $dark-base-text;
-            text-decoration: underline;
+        @media screen and (max-width: 768px){
+            color: white;
+            font-size: 60%;
+            &:hover{
+                font-size: 70%;
+                color: white
+            }
         }
-        &:not(.menu):hover{
-            color: darken(rgb(115, 4, 4), $light-color-on-hover-factor);
-            text-shadow: black 1px 1px 5px;
-            font-size: 90%;
+        @media screen and (min-width: 768px){
+            color: rgb(115, 4, 4);
+            font-size: 75%;
+            font-weight: 500;
+            text-shadow: white 2px 2px 5px,
+                white -2px -2px 5px;
+            &:hover{
+                text-shadow: black 1px 1px 5px;
+                font-size: 100%;
+                font-weight: 700;
+            }
         }
     }
 }
 // main-link
 @mixin section-heading{
-    display: block;
-    width: 100%;
-    margin-bottom: 1.5rem;
-    padding: .5rem;
-    text-align: center;
-    font: {
-        family: $bold-sans-serif;
-        weight: 400;
-        size: 2.5rem; 
+    h2{
+        display: block;
+        width: 100%;
+        margin: 1rem auto 2rem;
+        padding: .5rem;
+        text-align: center;
+        font: {
+            family: $bold-sans-serif;
+            weight: 400;
+            size: 2.5rem; 
+        }
     }
 }
 //portfolio-item-figcaption
@@ -38,7 +43,7 @@
     max-width: 90%;
     margin: auto;
     padding: 1rem;
-    text-align: left;
+    text-align: justify;
     font-size: .6rem;
     font-weight: 300;
     background-color: white;
@@ -60,7 +65,6 @@
     padding: .25rem;
     text-align: center;
     background-color: rgb(210, 198, 198);
-    // box-shadow: inset rgb(30, 26, 26) 0px 0px 1rem;
     box-shadow: inset lighten(rgb(30, 26, 26), 20%) 0px 0px .1rem;  
     border-radius: .2rem;
     color: black;
@@ -72,13 +76,18 @@
 }
 //construction-cone
 @mixin construction-cone{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     padding: .1rem;
     background-color: black;
+    // make room for menu icon
+    width: calc(100% - 5rem);
+    height: 4rem;
+    font-size: 2rem;
+    text-align: right;   
 }
-//Scion coalition scheme articles
+//SCS articles
 @mixin scs-article{
     margin: 1rem;
     text-align: justify;  
@@ -106,9 +115,7 @@
         padding: .5rem;
         display: inline-flex;
         gap: 1rem;
-        // border: solid .1px rgb(30, 26, 26);
-        box-shadow: inset rgb(210, 198, 198) 0px 0px 3rem;
-        // box-shadow: inset lighten(rgb(30, 26, 26), 20%) 0px 0px .1rem;   
+        box-shadow: inset rgb(210, 198, 198) 0px 0px 3rem;  
         font-weight: 700;
         &:hover{
             box-shadow: inset rgb(72, 67, 67) 0px 0px 1.5rem;
@@ -123,7 +130,7 @@
         }
     }
 }
-// social media icons
+//social media icons
 @mixin sm-icon{
     display: flex;
     min-width: 160px;
