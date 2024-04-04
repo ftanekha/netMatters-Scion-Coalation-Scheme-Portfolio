@@ -473,14 +473,15 @@ footer#main-footer section#enquiry-form form div textarea {
   outline: 0;
 }
 footer#main-footer section#enquiry-form form button {
-  margin-top: 2rem;
+  margin-top: 4rem;
   width: 100%;
-  padding: 0.25rem;
+  padding: 0.5rem;
   border: solid 0.1px rgb(30, 26, 26);
   box-shadow: inset rgb(210, 198, 198) 0px 0px 1rem;
   border-radius: 3px;
   font-variant: small-caps;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 footer#main-footer section#enquiry-form form button:hover {
   box-shadow: inset #706161 0px 0px 0.2rem;

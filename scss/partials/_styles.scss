@@ -370,15 +370,16 @@ footer#main-footer{
                 }
             }
             button{
-                margin-top: 2rem;
+                margin-top: 4rem;
                 width: 100%;
-                padding: .25rem;
+                padding: .5rem;
                 border: solid .1px rgb(30, 26, 26);
                 box-shadow: inset $box-shadow;
                 border-radius: 3px;
                 font: {
                     variant: small-caps;
-                    weight: 900;
+                    size: 1.25rem;
+                    weight: 600;
                 }
                 &:hover{
                     box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
