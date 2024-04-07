@@ -65,25 +65,6 @@ body{
                     @media screen and (min-width: 1025px){
                         padding: .5rem 0;
                     } 
-                    a{
-                        display: inline-flex;
-                        align-items: center;
-                        border-top-right-radius: 2rem;
-                        border-bottom-right-radius: 2rem;
-                        margin: 0 .71rem;
-                        padding: .25rem .5rem .25rem .25rem;
-                        @media screen and (max-width: 1025px){
-                            background: rgb(115, 4, 4);
-                            width: 4.5rem;
-                            height: 2.5rem;
-                            &:hover{
-                                background-color: black;
-                            }
-                        }
-                        @media screen and (width > 1270px){
-                            text-shadow: black 1px 1px 5px;
-                        } 
-                    }
                 }
                 li.item-homepage{
                     a{
@@ -94,12 +75,8 @@ body{
                         font-variant: small-caps;
                         letter-spacing: 2px;
                         color: white;
-                        background-color: black;
                         margin-left: .71rem;
                         text-align: center;
-                        &:hover{
-                            background: rgb(115, 4, 4);
-                        }
                         @media screen and (max-width: 1025px){
                             color: white;
                         }
