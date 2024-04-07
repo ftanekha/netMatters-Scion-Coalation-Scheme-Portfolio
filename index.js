@@ -15,6 +15,7 @@ document.addEventListener(
             }     
         }
         const path = document.location.pathname
+        console.log(path)
         //animate homepage arrow-down icon 
         function animateArrowDown(){
             const arrowDown = document.querySelector('.icon-arrow-down')
@@ -25,6 +26,7 @@ document.addEventListener(
         }
         if(path == '/index.html'){
             //play animation on initial page load
+            
             animateArrowDown()
         }else{
             //only toggle menu where it exists
