@@ -15,21 +15,23 @@ document.addEventListener(
             }     
         }
         const path = document.location.pathname
-        console.log(path)
-         if(path != '/index.html'){
-            //only toggle menu where display is NOT initially 'none'
-            document?.querySelector('.icon-menu')?.addEventListener(
-                'click',
-                ()=> toggleMenu()
-            )
-        }else{
-            //animate homepage arrow-down icon 
-            const arrowDown = document.querySelector('.icon-arrow-down') 
+        //animate homepage arrow-down icon 
+        function animateArrowDown(){
+            const arrowDown = document.querySelector('.icon-arrow-down')
             with(arrowDown.style){
                 animationName = 'arrow-pulse'
-                animationDuration = 5 + 's'
+                animationDuration = 3 + 's'
             }
         }
-       
+        if(path == '/index.html'){
+            //play animation on initial page load
+            animateArrowDown()
+        }else{
+            //only toggle menu where it exists
+            document?.querySelector('.icon-menu')?.addEventListener(
+                'click',
+                toggleMenu
+            )
+        }
     }
 )
