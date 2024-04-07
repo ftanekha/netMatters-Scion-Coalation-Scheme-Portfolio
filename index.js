@@ -19,13 +19,16 @@ document.addEventListener(
             const arrowDown = document.querySelector('.icon-arrow-down')
             with(arrowDown.style){
                 animationName = 'arrow-pulse'
-                animationDuration = 3 + 's'
+                animationDuration = 6 + 's'
             }
         }
         function isHomePage(){
             const path = document.location.pathname
             if(
-                path == '/netMatters-Scion-Coalation-Scheme-Portfolio/' || 
+                path == '/'
+                        ||
+                path == '/netMatters-Scion-Coalation-Scheme-Portfolio/index.html' 
+                        || 
                 path == '/index.html'
             ){
                 //play animation on initial page load
