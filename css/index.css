@@ -288,6 +288,7 @@ section#code-examples h2 {
 }
 section#code-examples h2 {
   margin-top: 1rem;
+  margin-bottom: 5rem;
 }
 section#code-examples div#code-examples-main-container {
   display: flex;
@@ -304,9 +305,11 @@ section#code-examples div#code-examples-main-container div#problem-solution-sele
   font-weight: 400;
 }
 section#code-examples div#code-examples-main-container div#problem-solution-selector p {
-  padding: 0 0.5rem;
+  padding: 0.75rem 0.5rem 0;
   font-size: 0.75rem;
   text-align: justify;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
 }
 section#code-examples div#code-examples-main-container div#problem-solution-selector div#solutions-tags-container {
   padding: 2rem 0;

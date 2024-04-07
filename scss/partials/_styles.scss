@@ -250,6 +250,7 @@ section{
         @include section-heading;
         h2{
             margin-top: 1rem;
+            margin-bottom: 5rem;
         }
         //everything but span
         div#code-examples-main-container{
@@ -267,9 +268,11 @@ section{
                     font-weight: 400;
                 }
                 p{
-                    padding: 0 .5rem;
+                    padding: .75rem .5rem 0;
                     font-size: .75rem;
                     text-align: justify;
+                    margin-top: -3rem;
+                    margin-bottom: 2rem;
                 }
                 div#solutions-tags-container{
                     padding: 2rem 0;
