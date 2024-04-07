@@ -24,7 +24,6 @@ header section#banner img {
   top: 1.25rem;
   left: 0;
   z-index: 10;
-  mix-blend-mode: plus-lighter;
 }
 @media screen and (min-width: 300px) {
   header section#banner img {

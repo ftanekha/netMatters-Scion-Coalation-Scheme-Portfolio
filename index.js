@@ -46,5 +46,26 @@ document.addEventListener(
             isHomePage()
         }
         initiateHomepageFunctionality()
+        //////
+        //DISPLAY RANDOM INITIALS
+        function displayRandonInitials(){
+            const targetImage = document.querySelector('#initials-image')
+            const imgSourceOptions = 
+            [ 
+                "multiply", "hard-light",
+                "difference", "exclusion",
+                "plus-darker", "plus-lighter"
+            ]
+            // generate random source on page load
+            function generateRandomImageSource(optionsArray){
+                const [min, max] = [0, optionsArray.length - 1]
+                const rangeFactor = max - min
+                return Math.floor(Math.random() * (rangeFactor + 1)) + min
+            }
+            const randomIndex = generateRandomImageSource(imgSourceOptions)
+            return targetImage.style.mixBlendMode = imgSourceOptions[randomIndex]
+        }
+        displayRandonInitials()
+        //////
     }
 )
