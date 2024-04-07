@@ -3,6 +3,7 @@ header{
     //BANNER
     section#banner{
         position: relative;
+        z-index: 3;
         width: 100%;
         min-height: 100vh;
         background-image:url("../assets/images/go.jpg");
@@ -13,6 +14,36 @@ header{
         filter: contrast(100%);
         filter: grayscale(30%);    
         filter: hue-rotate(10deg);
+        img{
+            width: 3rem;
+            height: 3rem;
+            position: fixed;
+            top: 1.25rem;
+            left: 0;
+            z-index: 10;
+            // mix-blend-mode: multiply;
+            // mix-blend-mode: hard-light;
+            // mix-blend-mode: difference;
+            // mix-blend-mode: exclusion;
+            // mix-blend-mode: plus-darker;
+            mix-blend-mode: plus-lighter;
+            @media screen and (min-width: 300px){
+                width: 4rem;
+                height: 4rem;
+            }
+            @media screen and (min-width: 450px){
+                width: 5rem;
+                height: 5rem;
+            }
+            @media screen and (width > 500px){
+                width: 8rem;
+                height: 8rem;
+            }
+            @media screen and (width > 900px){
+                width: 12rem;
+                height: 12rem;
+            }
+        }
         *{
             color: white;
             text-shadow: rgb(229, 54, 54) 0px 2px 3px, 

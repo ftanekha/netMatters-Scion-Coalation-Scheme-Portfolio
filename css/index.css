@@ -5,6 +5,7 @@ header {
 }
 header section#banner {
   position: relative;
+  z-index: 3;
   width: 100%;
   min-height: 100vh;
   background-image: url("../assets/images/go.jpg");
@@ -15,6 +16,39 @@ header section#banner {
   filter: contrast(100%);
   filter: grayscale(30%);
   filter: hue-rotate(10deg);
+}
+header section#banner img {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  top: 1.25rem;
+  left: 0;
+  z-index: 10;
+  mix-blend-mode: plus-lighter;
+}
+@media screen and (min-width: 300px) {
+  header section#banner img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+@media screen and (min-width: 450px) {
+  header section#banner img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media screen and (width > 500px) {
+  header section#banner img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+@media screen and (width > 900px) {
+  header section#banner img {
+    width: 12rem;
+    height: 12rem;
+  }
 }
 header section#banner * {
   color: white;
