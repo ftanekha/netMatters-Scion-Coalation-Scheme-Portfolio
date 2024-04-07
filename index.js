@@ -14,8 +14,6 @@ document.addEventListener(
                 }
             }     
         }
-        const path = document.location.pathname
-        console.log(path)
         //animate homepage arrow-down icon 
         function animateArrowDown(){
             const arrowDown = document.querySelector('.icon-arrow-down')
@@ -24,16 +22,22 @@ document.addEventListener(
                 animationDuration = 3 + 's'
             }
         }
-        //if(path == '/index.html')
-        if(path == '/netMatters-Scion-Coalation-Scheme-Portfolio/'){
-            //play animation on initial page load
-            animateArrowDown()
-        }else{
-            //only toggle menu where it exists
-            document?.querySelector('.icon-menu')?.addEventListener(
-                'click',
-                toggleMenu
-            )
+        function isHomePage(){
+            const path = document.location.pathname
+            if(
+                path == '/netMatters-Scion-Coalation-Scheme-Portfolio/' || 
+                path == '/index.html'
+            ){
+                //play animation on initial page load
+                animateArrowDown()
+            }else{
+                //only toggle menu where it exists
+                document?.querySelector('.icon-menu')?.addEventListener(
+                    'click',
+                    toggleMenu
+                )
+            }
         }
+        isHomePage()
     }
 )
