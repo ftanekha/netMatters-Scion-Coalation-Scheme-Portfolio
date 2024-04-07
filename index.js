@@ -24,9 +24,9 @@ document.addEventListener(
                 animationDuration = 3 + 's'
             }
         }
-        if(path == '/index.html'){
+        //if(path == '/index.html')
+        if(path == '/netMatters-Scion-Coalation-Scheme-Portfolio/'){
             //play animation on initial page load
-            
             animateArrowDown()
         }else{
             //only toggle menu where it exists
