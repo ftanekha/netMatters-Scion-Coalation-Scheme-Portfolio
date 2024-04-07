@@ -1,6 +1,11 @@
 document.addEventListener(
     'DOMContentLoaded',
     ()=>{
+        const arrowDown = document.querySelector('.icon-arrow-down') 
+        with(arrowDown.style){
+            animationName = 'arrow-pulse'
+            animationDuration = 5 + 's'
+        }
         function toggleMenu(){
             //show/hide nav menu items/links
             const menu = document.querySelector('nav > ul')
