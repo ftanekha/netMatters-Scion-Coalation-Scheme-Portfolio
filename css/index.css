@@ -403,7 +403,6 @@ section#code-examples div#code-examples-main-container div#coming-soon-playlist-
 section#scion-coalition-scheme {
   display: flex;
   flex-direction: column;
-  margin-bottom: 4rem;
   height: 100vh;
 }
 section#scion-coalition-scheme h2 {
