@@ -9,7 +9,10 @@ header{
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        background-repeat: no-repeat;      
+        background-repeat: no-repeat;  
+        filter: contrast(100%);
+        filter: grayscale(30%);    
+        filter: hue-rotate(10deg);
         *{
             color: white;
             text-shadow: rgb(229, 54, 54) 0px 2px 3px, 
@@ -196,7 +199,6 @@ section{
             text-align: center;
             a{
                 display: block;
-                // padding: 1rem;
                 margin-bottom: -.25rem;
                 figure{
                     padding: 0 0 1rem 0;
@@ -209,7 +211,9 @@ section{
                         box-shadow: inset $box-shadow;
                         border-radius: 10px;
                         &:hover{
-                            transform: scale(1.01);
+                            box-shadow: 1px 1px 1px 3px lightgray,
+                                0px 0px 10px 3px rgb(115, 4, 4);
+                            filter: contrast(125%);
                         }
                     }
                     figcaption{
@@ -373,7 +377,7 @@ footer#main-footer{
                 margin-top: 4rem;
                 width: 100%;
                 padding: .5rem;
-                border: solid .1px rgb(30, 26, 26);
+                border: none;
                 box-shadow: inset $box-shadow;
                 border-radius: 3px;
                 font: {
@@ -382,8 +386,7 @@ footer#main-footer{
                     weight: 600;
                 }
                 &:hover{
-                    box-shadow: inset lighten(rgb(30, 26, 26), 30%) 0px 0px .2rem;
-                    color: $light-base-text;
+                    background-color: darken(lightgray, .1%);
                 }
             }
             @media screen and (min-width: 768px){

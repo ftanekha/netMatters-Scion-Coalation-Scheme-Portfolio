@@ -51,10 +51,7 @@
     //show tooltip on xl screens
     @media screen and (min-width: 1200px){
         &:hover{
-            transform: scale(1.2);
-            background-color: rgb(30, 26, 26);
-            border-radius: .5rem;
-            color: white;
+            font-weight: 600;
         }
     }
 }
@@ -80,7 +77,6 @@
     top: 0;
     right: 0;
     padding: .1rem;
-    background-color: black;
     // make room for menu icon
     width: calc(100% - 3rem);
     height: 3rem;
@@ -102,6 +98,7 @@
             font-size: 200%;
             padding: 0;
             height: 5rem;
+            color: lighten(rgb(115, 4, 4), 10%);
         }
     }
     footer{
@@ -119,9 +116,13 @@
         font-weight: 700;
         &:hover{
             box-shadow: inset rgb(72, 67, 67) 0px 0px 1.5rem;
+            span{
+                color: lighten(rgb(115, 4, 4), 20%);
+            }
         }
         span{
             flex-grow: 1;
+            color: rgb(115, 4, 4);
         } 
         img{
             width: 1rem;

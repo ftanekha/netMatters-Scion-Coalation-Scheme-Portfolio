@@ -2,35 +2,26 @@ document.addEventListener(
     'DOMContentLoaded',
     ()=>{
         function toggleMenu(){
-            // show/hide nav menu items/links
-            let menu = document.querySelector('.icon-menu + ul')
-                let menuDisplayMode = menu.style.display
-                if(menuDisplayMode == 'none'){
-                    with(menu.style){
-                        display = 'flex'
-                        flexDirection = 'column'
-                        listStyleType = 'none'
-                    }
+            //show/hide nav menu items/links
+            const menu = document.querySelector('nav > ul')
+            with(menu.style){
+                if(display != 'flex'){
+                    display = 'flex'
+                    flexDirection = 'column'
+                    listStyleType = 'none'
                 }else{
-                    menu.style.display = 'none'  
+                    display = 'none'
                 }
+            }     
         }
-        //toggleMenu with menu icon
-        const menuIcon = document.querySelector('.icon-menu')
-        menuIcon.addEventListener(
-            'click',
-            ()=> {
-                toggleMenu()
-            }
-        )
-        // toggleMenu with nav menu item
-        const menuItem = document.querySelector('.nav')
-        menuItem.addEventListener(
-            'click',
-            ({target})=> {
-                target.parentNode.style.display = 'none'
-                toggleMenu()
-            }
-        )
+        //only toggle menu where display is NOT initially 'none'
+        const path = document.location.pathname
+         if(path != '/index.html'){
+            document?.querySelector('.icon-menu')?.addEventListener(
+                'click',
+                ()=> toggleMenu()
+            )
+        }
+       
     }
 )
