@@ -76,12 +76,7 @@
     font-weight: 300;
     background-color: white;
     text-shadow: red 0px .05px;
-    //show tooltip on xl screens
-    @media screen and (min-width: 1200px){
-        &:hover{
-            font-weight: 600;
-        }
-    }
+    font-weight: 600;
 }
 //tags
 @mixin tag{

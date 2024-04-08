@@ -287,11 +287,7 @@ section#portfolio div#portfolio-list-of-projects a figure figcaption {
   font-weight: 300;
   background-color: white;
   text-shadow: red 0px 0.05px;
-}
-@media screen and (min-width: 1200px) {
-  section#portfolio div#portfolio-list-of-projects a figure figcaption:hover {
-    font-weight: 600;
-  }
+  font-weight: 600;
 }
 @media screen and (min-width: 576px) {
   section#portfolio div#portfolio-list-of-projects {
