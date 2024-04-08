@@ -229,25 +229,43 @@ section#portfolio h2 {
   margin-bottom: 3rem;
 }
 section#portfolio h2 + p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+section#portfolio a.clickable-tech-link {
+  background-color: antiquewhite;
+  padding: 0.2rem;
 }
 section#portfolio p, section#portfolio dt, section#portfolio dl {
   font-size: 0.8rem;
   text-align: left;
   margin-left: 0;
 }
+section#portfolio dl {
+  padding: 1rem;
+}
+@media screen and (width > 576px) {
+  section#portfolio dl {
+    padding: 2rem;
+  }
+}
 section#portfolio dl dt {
   padding: 0.5rem 0;
   font-weight: 900;
 }
 section#portfolio dl p {
-  border-left: double 1rem rgb(115, 4, 4);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border: none;
   margin: 1rem 0;
-  padding-left: 1rem;
 }
-section#portfolio h2, section#portfolio p, section#portfolio dl {
+@media screen and (width > 576px) {
+  section#portfolio dl p {
+    border-left: double 1rem rgb(115, 4, 4);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 3rem;
+  }
+}
+section#portfolio h2 {
   padding-left: 3rem;
 }
 section#portfolio div#portfolio-list-of-projects {

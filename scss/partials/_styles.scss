@@ -203,7 +203,12 @@ section{
             margin-bottom: 3rem;
         }
         h2 + p{
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 1rem;
+        }
+        a.clickable-tech-link{
+            background-color: antiquewhite;
+            padding: .2rem;
         }
         p, dt, dl{
             font-size: .8rem;
@@ -211,19 +216,26 @@ section{
             margin-left: 0;
         }
         dl{
+            padding: 1rem;
+            @media screen and (width > 576px) {
+                padding: 2rem;
+            }
             dt{
                 padding: .5rem 0;
                 font-weight: 900;
             }
             p{
-                border-left: double 1rem rgb(115, 4, 4);
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
+                border: none;
                 margin: 1rem 0;
-                padding-left: 1rem;
+                @media screen and (width > 576px) {
+                    border-left: double 1rem rgb(115, 4, 4);
+                    border-top-left-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                    padding-left: 3rem;
+                }
             }
         }
-        h2, p, dl{
+        h2{
             //make room for the navigation menu
             padding-left: 3rem;
         }
