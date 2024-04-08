@@ -228,7 +228,8 @@ section{
                 border: none;
                 margin: 1rem 0;
                 @media screen and (width > 576px) {
-                    border-left: double 1rem rgb(115, 4, 4);
+                    // border-left: double 1rem rgb(115, 4, 4);
+                    border-left: double 1rem lightgray;
                     border-top-left-radius: 5px;
                     border-bottom-left-radius: 5px;
                     padding-left: 3rem;

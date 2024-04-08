@@ -259,7 +259,7 @@ section#portfolio dl p {
 }
 @media screen and (width > 576px) {
   section#portfolio dl p {
-    border-left: double 1rem rgb(115, 4, 4);
+    border-left: double 1rem lightgray;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding-left: 3rem;
