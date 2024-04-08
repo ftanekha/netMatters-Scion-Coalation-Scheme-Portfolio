@@ -62,8 +62,9 @@ body{
                 li{
                     margin: 1rem 0;
                     @include main-nav-item(1.2, 10%, 50%);
-                    @media screen and (min-width: 1025px){
-                        padding: .5rem 0;
+                    @media screen and (min-width: 1200px){
+                        margin: 0;
+                        padding: .5rem 1rem;
                     } 
                 }
                 li.item-homepage{
@@ -77,8 +78,17 @@ body{
                         color: white;
                         margin-left: .71rem;
                         text-align: center;
-                        @media screen and (max-width: 1025px){
+                        @media screen and (max-width: 1200px){
                             color: white;
+                            //corrective measure to utilise space
+                            transform: rotate(90deg);
+                            margin: 1rem 0 1rem -.2rem;
+                            padding-right: .5rem;
+                        }
+                        @media screen and (min-width: 1200px){
+                            color: rgb(115, 4, 4);
+                            margin-left: -.3rem;
+                            font-variant: small-caps;
                         }
                     }
                 }

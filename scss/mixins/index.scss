@@ -9,22 +9,34 @@
         padding: .25rem .5rem .25rem .25rem;
         @media screen and (width > 1270px){
             text-shadow: black 1px 1px 5px;
-        } 
-        @media screen and (max-width: 1025px){
+        }
+        @media screen and (max-width: 1200px){
             color: white;
-            font-size: 60%;
             background: rgb(115, 4, 4);
             width: 4.5rem;
             height: 2.5rem;
+            //corrective measure to utilise space 
+            transform: rotate(90deg);
+            margin: 1rem 0 1rem -.4rem;
+            padding-right: .5rem;
+            //
+            &:not(.homepage-anchor){
+                font-size: 60%;
+            }
+            &.homepage-anchor{
+                font-size: 200%;
+            }
             &:hover{
                 font-size: 70%;
                 color: white;
                 background-color: black;
             }
         }
-        @media screen and (min-width: 1025px){
+        @media screen and (min-width: 1200px){
+            margin: 0 0 0 -.35rem;
             color: rgb(115, 4, 4);
-            font-size: 75%;
+            height: 2rem;
+            font-size: 85%;
             font-weight: 500;
             text-shadow: white 2px 2px 5px,
                 white -2px -2px 5px;

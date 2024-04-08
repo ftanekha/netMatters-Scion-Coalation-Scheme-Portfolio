@@ -700,13 +700,21 @@ body header nav ul li a {
     text-shadow: black 1px 1px 5px;
   }
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1200px) {
   body header nav ul li a {
     color: white;
-    font-size: 60%;
     background: rgb(115, 4, 4);
     width: 4.5rem;
     height: 2.5rem;
+    transform: rotate(90deg);
+    margin: 1rem 0 1rem -0.4rem;
+    padding-right: 0.5rem;
+  }
+  body header nav ul li a:not(.homepage-anchor) {
+    font-size: 60%;
+  }
+  body header nav ul li a.homepage-anchor {
+    font-size: 200%;
   }
   body header nav ul li a:hover {
     font-size: 70%;
@@ -714,10 +722,12 @@ body header nav ul li a {
     background-color: black;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   body header nav ul li a {
+    margin: 0 0 0 -0.35rem;
     color: rgb(115, 4, 4);
-    font-size: 75%;
+    height: 2rem;
+    font-size: 85%;
     font-weight: 500;
     text-shadow: white 2px 2px 5px, white -2px -2px 5px;
   }
@@ -727,9 +737,10 @@ body header nav ul li a {
     font-weight: 700;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1200px) {
   body header nav ul li {
-    padding: 0.5rem 0;
+    margin: 0;
+    padding: 0.5rem 1rem;
   }
 }
 body header nav ul li.item-homepage a {
@@ -743,9 +754,19 @@ body header nav ul li.item-homepage a {
   margin-left: 0.71rem;
   text-align: center;
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1200px) {
   body header nav ul li.item-homepage a {
     color: white;
+    transform: rotate(90deg);
+    margin: 1rem 0 1rem -0.2rem;
+    padding-right: 0.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body header nav ul li.item-homepage a {
+    color: rgb(115, 4, 4);
+    margin-left: -0.3rem;
+    font-variant: small-caps;
   }
 }
 @media screen and (min-width: 922px) {
