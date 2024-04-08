@@ -5,20 +5,18 @@
         align-items: center;
         border-top-right-radius: 2rem;
         border-bottom-right-radius: 2rem;
-        margin: 0 .71rem;
+        margin: -.5rem .8rem;
         padding: .25rem .5rem .25rem .25rem;
-        @media screen and (width > 1270px){
-            text-shadow: black 1px 1px 5px;
-        }
         @media screen and (max-width: 1200px){
             color: white;
-            background: rgb(115, 4, 4);
-            width: 4.5rem;
+            background-color: rgb(115, 4, 4);
+            width: 6rem;
             height: 2.5rem;
             //corrective measure to utilise space 
             transform: rotate(90deg);
-            margin: 1rem 0 1rem -.4rem;
+            margin: 2rem 1rem 0 -1.25rem;
             padding-right: .5rem;
+            padding-left: .5rem;
             //
             &:not(.homepage-anchor){
                 font-size: 60%;
@@ -33,11 +31,13 @@
             }
         }
         @media screen and (min-width: 1200px){
-            margin: 0 0 0 -.35rem;
+            // margin: 0 0 0 -.35rem;
+            margin: 1rem 0 1rem -.4rem;
             color: rgb(115, 4, 4);
             height: 2rem;
             font-size: 85%;
             font-weight: 500;
+            transform: rotate(0deg);
             text-shadow: white 2px 2px 5px,
                 white -2px -2px 5px;
             &:hover{
@@ -45,6 +45,9 @@
                 font-size: 100%;
                 font-weight: 700;
             }
+        }
+        @media screen and (width > 1270px){
+            text-shadow: black 1px 1px 5px;
         }
     }
 }

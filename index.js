@@ -70,34 +70,4 @@ document.addEventListener(
             )
         }
     }
-)
-
-//    console.log(menu.firstElementChild)
-                        // highlight current page in nav menu
-                        // determine current page link name
-
-
-                        // const urlExtension = '.html'
-                        // const currentPageLink = path.substring(1, path.length - urlExtension.length)
-                        // console.log(currentPageLink)
-                        // //target current page link item
-                        // const currentPageNavListItem = document.querySelector(`.item-${currentPageLink}`)
-                        // console.log(currentPageNavListItem.firstElementChild)
-
-
-                        // highlight the nested anchor element
-                        // currentPageNavListItem.style.backgroundColor = 'black'
-                        //address problematic cases
-                        // setTimeout(() => {
-                        //     switch(currentPageLink){
-                        //         case 'my-portfolio':
-                        //             (document.querySelector('.item-my-portfolio a')).style.backgroundColor = 'black'
-                        //             break
-                        //         case 'scs':
-                        //             (document.querySelector('.item-scs a')).style.backgroundColor = 'black'
-                        //             break
-                        //         default:
-                        //             console.error('Error: Invalink nav-menu link!')
-                        //             break
-                        //     }
-                        // }, 3e3);
+)                       
