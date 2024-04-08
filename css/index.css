@@ -699,10 +699,10 @@ body header nav ul li a {
   body header nav ul li a {
     color: white;
     background-color: rgb(115, 4, 4);
-    width: 6rem;
+    width: 7rem;
     height: 2.5rem;
     transform: rotate(90deg);
-    margin: 2rem 1rem 0 -1.25rem;
+    margin: 3rem 1rem 0 -1.5rem;
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
@@ -747,7 +747,7 @@ body header nav ul li a {
   }
 }
 body header nav ul li.item-homepage {
-  margin: -1rem 0 -0.5rem 0.2rem;
+  margin: -2.5rem 0 -0.5rem 0.2rem;
 }
 body header nav ul li.item-homepage a {
   display: inline-flex;

@@ -3,13 +3,16 @@ document.addEventListener(
     ()=>{
         //current URL pathname
         const path = document.location.pathname
+        //check if current location === homepage
         function isHomePage(){
             if(
                 path == '/'
                         ||
-                path == '/netMatters-Scion-Coalation-Scheme-Portfolio/index.html' 
-                        || 
                 path == '/index.html'
+                        ||
+                path == '/netMatters-Scion-Coalation-Scheme-Portfolio/'
+                        ||
+                path == '/netMatters-Scion-Coalation-Scheme-Portfolio/index.html' 
             )return true
             return false
         }
@@ -23,7 +26,7 @@ document.addEventListener(
                     animationDuration = 6 + 's'
                 }
             }
-            //DISPLAY RANDOM INITIALS
+            //DISPLAY RANDOM INITIALS on homepage
             function displayInitials(){
                 const targetImage = document.querySelector('#initials-image')
                 const imgSourceOptions = 
@@ -32,21 +35,21 @@ document.addEventListener(
                     "difference", "exclusion",
                     "plus-darker", "plus-lighter"
                 ]
-                // generate random blend mode on page load
+                // generate random Initials image CSS blend mode on homepage load
                 function generateRandomImageBlendMode(optionsArray){
                     const [min, max] = [0, optionsArray.length - 1]
                     const rangeFactor = max - min
                     return Math.floor(Math.random() * (rangeFactor + 1)) + min
                 }
                 const randomIndex = generateRandomImageBlendMode(imgSourceOptions)
-                //display initials in randomised blend mode
+                //display initials image in randomised blend mode
                 targetImage.style.mixBlendMode = imgSourceOptions[randomIndex]
             }
             //
             animateArrowDown()
             displayInitials()
         }
-        //show/hide nav menu items/links
+        //show/hide nav menu items/links on pages !== homepage
         function toggleMenu(){
             const menu = document.querySelector('nav > ul')
             with(menu.style){
@@ -59,15 +62,25 @@ document.addEventListener(
                 }    
             }
         }
-        //animate menu icon & display initials on initial homepage load
+        //animate arrow-down icon & display initials on initial homepage load
         if( isHomePage() ){
             initiateHomepageFunctionality()
         }else{//OR
-            //only toggle menu where it exists i.e. NOT homepage
+            //toggle nav-menu where it exists i.e. NOT homepage
             document.querySelector('.icon-menu').addEventListener(
                 'click',
                 toggleMenu
-            )
+            )//&&
+             //highlight current page-link in nav menu
+            //determine current page link name
+            const urlExtension = '.html'
+            const currentPageLink = path.substring(1, path.length - urlExtension.length)
+            //target current page link item
+            const currentPageNavListItem = document.querySelector(`.item-${currentPageLink}`)
+            //target <a> i.e. only child el
+            const targetAnchorTag = currentPageNavListItem.firstElementChild
+            //highlight the anchor element
+            targetAnchorTag.style.backgroundColor = 'black'
         }
     }
 )                       
