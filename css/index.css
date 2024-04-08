@@ -792,7 +792,7 @@ body header nav ul li.item-homepage {
 }
 @media screen and (max-width: 768px) {
   body header nav ul li.item-homepage a {
-    margin: 3.5rem -6.3rem 1.75rem -0.5rem;
+    margin: 4rem -6.3rem 1.75rem -0.5rem;
     padding-right: 0;
   }
 }
