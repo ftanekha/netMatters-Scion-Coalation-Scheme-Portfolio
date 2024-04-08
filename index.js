@@ -72,15 +72,29 @@ document.addEventListener(
                 toggleMenu
             )//&&
              //highlight current page-link in nav menu
-            //determine current page link name
-            const urlExtension = '.html'
-            const currentPageLink = path.substring(1, path.length - urlExtension.length)
-            //target current page link item
-            const currentPageNavListItem = document.querySelector(`.item-${currentPageLink}`)
-            //target <a> i.e. only child el
-            const targetAnchorTag = currentPageNavListItem.firstElementChild
-            //highlight the anchor element
-            targetAnchorTag.style.backgroundColor = 'black'
+            function highlightCurrentPageLink(){
+                const linkOptions =[ 
+                    "about-me", "my-portfolio",
+                    "code-examples", "scs",
+                    "contact-me"
+                ]
+                //path contains the current page name
+                linkOptions.forEach(
+                    link => {
+                        if(path.includes(link)){
+                            //target current page menu list item
+                            const currentPageNavListItem = document.querySelector(`.item-${link}`)
+                            //target nested <a> i.e. only child el
+                            const targetAnchorTag = currentPageNavListItem.firstElementChild
+                            //highlight the anchor element
+                            targetAnchorTag.style.backgroundColor = 'black'
+                            //change text color from red to white
+                            targetAnchorTag.style.color = 'white'
+                        }
+                    }
+                )
+            }
+            highlightCurrentPageLink()
         }
     }
 )                       
