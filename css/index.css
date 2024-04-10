@@ -302,6 +302,11 @@ section#portfolio div#portfolio-list-of-projects a figure img:hover {
     height: 200px;
   }
 }
+@media screen and (width > 700px) and (width < 922px) {
+  section#portfolio div#portfolio-list-of-projects a figure img {
+    max-width: 350px;
+  }
+}
 section#portfolio div#portfolio-list-of-projects a figure figcaption {
   max-width: 70%;
   margin: auto;
@@ -316,6 +321,11 @@ section#portfolio div#portfolio-list-of-projects a figure figcaption {
 @media screen and (width > 576px) {
   section#portfolio div#portfolio-list-of-projects a figure figcaption {
     max-width: 80%;
+  }
+}
+@media screen and (width > 700px) and (width < 922px) {
+  section#portfolio div#portfolio-list-of-projects a figure figcaption {
+    max-width: 350px;
   }
 }
 @media screen and (width > 922px) {
@@ -769,7 +779,7 @@ body header nav ul li a {
     text-shadow: black 1px 1px 5px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   body header nav ul li a {
     height: 1rem;
     width: 7rem;
@@ -790,7 +800,7 @@ body header nav ul li a {
 body header nav ul li.item-homepage {
   margin: -2.5rem 0 -0.5rem 0.2rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
   body header nav ul li.item-homepage a {
     margin: 4rem -6.3rem 1.75rem -0.5rem;
     padding-right: 0;
@@ -807,7 +817,7 @@ body header nav ul li.item-homepage a {
   text-align: center;
   transform: rotate(90deg);
 }
-@media screen and (width > 768px) {
+@media screen and (width > 700px) {
   body header nav ul li.item-homepage a {
     height: 2.5rem;
     margin: 3rem 3rem -2.75rem 0.25rem;

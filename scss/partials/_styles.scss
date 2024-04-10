@@ -269,11 +269,17 @@ section{
                             width: 90%;
                             height: 200px;
                         }
+                        @media screen and (width > 700px) and (width < 922px){
+                            max-width: 350px;
+                        }
                     }
                     figcaption{
                         @include portfolio-item-figcaption;
                         @media screen and (width > 576px){
                             max-width: 80%;
+                        }
+                        @media screen and (width > 700px) and (width < 922px){
+                            max-width: 350px;
                         }
                         @media screen and (width > 922px){
                             &:hover{

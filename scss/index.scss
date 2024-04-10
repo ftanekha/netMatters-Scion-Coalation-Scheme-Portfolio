@@ -62,7 +62,7 @@ body{
                 li{
                     margin: 1rem 0;
                     @include main-nav-item(1.2, 10%, 50%);
-                    @media screen and (max-width: 768px){
+                    @media screen and (max-width: 700px){
                         a{
                             height: 1rem;
                             width: 7rem;
@@ -82,7 +82,7 @@ body{
                 li.item-homepage{
                     margin: -2.5rem 0 -.5rem .2rem;
                     //smaller menu items on small screen devices
-                    @media screen and (max-width: 768px){
+                    @media screen and (max-width: 700px){
                         a{
                             margin: 4rem -6.3rem 1.75rem -.5rem;
                             padding-right: 0;
@@ -99,7 +99,7 @@ body{
                         text-align: center;
                         transform: rotate(90deg);
                         //smaller menu items on small screen devices
-                        @media screen and (width > 768px){
+                        @media screen and (width > 700px){
                             height: 2.5rem;
                             margin: 3rem 3rem -2.75rem .25rem;
                         }
