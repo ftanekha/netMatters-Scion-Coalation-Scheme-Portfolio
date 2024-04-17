@@ -95,6 +95,27 @@ document.addEventListener(
                 )
             }
             highlightCurrentPageLink()
+            
+            //limit the width of nav link items to utilise space efficiently
+            const navList =  [];
+            (
+                document.querySelectorAll('.nav-link')
+            ).forEach( navItem => navList.push(navItem))
+            //verify array
+            // console.log(Array.isArray(navList))
+            //verify nav item length
+            navList.forEach( navItem => console.log(navItem.textContent.length))
+            //One character is equivalent to 8 pixels, so
+            const navLinksLengths = []
+            navList.forEach(
+                navItem => navLinksLengths.push(navItem.textContent.length * 8)
+            )
+            // console.log(navLinksLengths)
+            //
+            navList.forEach( navItem => {
+                navItem.style.width = navLinksLengths[navList.indexOf(navItem)] + 'px'
+                console.log(navItem.style.width)
+            })
         }
     }
 )                       
