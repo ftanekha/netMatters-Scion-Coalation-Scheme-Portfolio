@@ -743,6 +743,7 @@ body header nav ul li a {
   body header nav ul li a {
     color: white;
     background-color: rgb(115, 4, 4);
+    width: 7rem;
     height: 2.5rem;
     transform: rotate(90deg);
     margin: 3rem 1rem 0 -1.5rem;

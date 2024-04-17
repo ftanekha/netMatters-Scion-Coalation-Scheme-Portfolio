@@ -96,26 +96,28 @@ document.addEventListener(
             }
             highlightCurrentPageLink()
             
-            //limit the width of nav link items to utilise space efficiently
-            const navList =  [];
-            (
-                document.querySelectorAll('.nav-link')
-            ).forEach( navItem => navList.push(navItem))
-            //verify array
-            // console.log(Array.isArray(navList))
-            //verify nav item length
-            navList.forEach( navItem => console.log(navItem.textContent.length))
-            //One character is equivalent to 8 pixels, so
-            const navLinksLengths = []
-            navList.forEach(
-                navItem => navLinksLengths.push(navItem.textContent.length * 8)
-            )
-            // console.log(navLinksLengths)
-            //
-            navList.forEach( navItem => {
-                navItem.style.width = navLinksLengths[navList.indexOf(navItem)] + 'px'
-                console.log(navItem.style.width)
-            })
+            //limit the width of navigation link items to utilise space efficiently
+            // function limitNavLinkItemWidth(){
+            // const navList =  [];
+            // (//populate array with navigation links
+            //     document.querySelectorAll('.nav-link')
+            // ).forEach( navItem => navList.push(navItem))
+            // //Use number of characters to determine width
+            // //One character is equivalent to 8 pixels, so
+            // const navLinksLengths = []
+            // navList.forEach(
+            //     navItem => navLinksLengths.push(navItem.textContent.length * 8)
+            // )
+            // //Media query
+            // // Define the query
+            // const mediaQuery = window.matchMedia('(max-width: 1200px)')
+            //     if(mediaQuery.matches){
+            //         navList.forEach( 
+            //             navItem =>  navItem.style.width = navLinksLengths[navList.indexOf(navItem)] + 'px'
+            //         )
+            //     }
+            // }
+            // limitNavLinkItemWidth()
         }
     }
 )                       
