@@ -407,6 +407,7 @@ footer#main-footer{
                     display: flex;
                     box-sizing: border-box;
                     label{
+                        min-width: 90px;
                         width: 35%;
                         padding: .2rem;
                         color: $light-base-text;
@@ -417,6 +418,7 @@ footer#main-footer{
                         }
                     }
                     input{
+                        min-width: 160px;
                         flex-grow: 1;
                         margin: .2rem 0;
                         border: 0;
@@ -433,8 +435,8 @@ footer#main-footer{
                 }
                 textarea{
                     margin: 2rem 0 0 0;
-                    min-width: 100%;
-                    max-width: 100%;
+                    min-width: 250px;
+                    width: 100%;
                     min-height: 10rem;
                     max-height: 10rem;
                     height: 100%;
@@ -469,6 +471,7 @@ footer#main-footer{
     }
 }
 section#enquiry-form, button{
+    min-width: 250px;
     flex: 1;
 }
 //SM LINKS

@@ -532,6 +532,7 @@ footer#main-footer section#enquiry-form form div.contact-info-detail {
   box-sizing: border-box;
 }
 footer#main-footer section#enquiry-form form div.contact-info-detail label {
+  min-width: 90px;
   width: 35%;
   padding: 0.2rem;
   color: #5e6480;
@@ -540,6 +541,7 @@ footer#main-footer section#enquiry-form form div.contact-info-detail label {
   font-weight: 500;
 }
 footer#main-footer section#enquiry-form form div.contact-info-detail input {
+  min-width: 160px;
   flex-grow: 1;
   margin: 0.2rem 0;
   border: 0;
@@ -555,8 +557,8 @@ footer#main-footer section#enquiry-form form div input:focus, footer#main-footer
 }
 footer#main-footer section#enquiry-form form div textarea {
   margin: 2rem 0 0 0;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 250px;
+  width: 100%;
   min-height: 10rem;
   max-height: 10rem;
   height: 100%;
@@ -588,6 +590,7 @@ footer#main-footer section#enquiry-form form button:hover {
 }
 
 section#enquiry-form, button {
+  min-width: 250px;
   flex: 1;
 }
 
