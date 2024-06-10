@@ -56,12 +56,18 @@ nav ul li a:hover {
   outline: none;
 }
 nav ul li a img {
-  max-width: 150px;
-  height: 150px;
+  max-width: 70px;
+  height: 70px;
   position: absolute;
   top: 0rem;
   left: 0;
   z-index: 10;
+}
+@media (min-width: 576px) {
+  nav ul li a img {
+    max-width: 120px;
+    height: 120px;
+  }
 }
 nav ul li:nth-child(2) {
   margin-top: 200px;
