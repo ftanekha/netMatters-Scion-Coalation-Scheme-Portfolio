@@ -25,6 +25,7 @@ document.addEventListener(
                                     rotateLinks.style.flexDirection = 'column'
                                     rotateLinks.style.marginTop = '-400px'
                                     rotateLinks.style.marginLeft = '-60px'
+                                    rotateLinks.style.gap = '20px'
                                     clearTimeout(flipTimer)
                                 }, 300
                             )
