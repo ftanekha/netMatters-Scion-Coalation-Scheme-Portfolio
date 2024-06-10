@@ -19,9 +19,15 @@ document.addEventListener(
                         }else{//toggle main-nav
                             link.style.visibility = 'hidden'
                             //flip social media icons
-                            rotateLinks.style.flexDirection = 'column'
-                            rotateLinks.style.marginTop = '-400px'
-                            rotateLinks.style.marginLeft = '-60px'
+                            //there's a delay due to the hamburger icon having a .2s trasition delay?
+                            const flipTimer = setTimeout(
+                                ()=> {
+                                    rotateLinks.style.flexDirection = 'column'
+                                    rotateLinks.style.marginTop = '-400px'
+                                    rotateLinks.style.marginLeft = '-60px'
+                                    clearTimeout(flipTimer)
+                                }, 300
+                            )
                         }
                     }
                 )

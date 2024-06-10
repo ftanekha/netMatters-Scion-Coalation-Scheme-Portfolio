@@ -10,6 +10,7 @@ span.icon-menu{
     font-size: 3rem;
     font-weight: 100;
     background-color: white;
+    transition: .2s;
     &:hover{
         transform: scale(1.2);
         cursor: pointer;
@@ -38,12 +39,13 @@ nav{
                 background-color: black;
                 border-top-right-radius: 2rem;
                 border-bottom-right-radius: 2rem;
+                transition: .2s;
                 &:hover{
-                    background-color: lightgray;
-                    color: black;
+                    background-color: rgb(115, 4, 4);
+                    color: white;
                     text-shadow: none;
                     font-weight: 900;
-                    outline: inset rgb(115, 4, 4) 3px;
+                    outline: none;
                 }
                 img{
                     max-width: 150px;
@@ -65,7 +67,6 @@ nav{
                 section{
                     padding: 0;
                    div{
-                    //display = flex
                     gap: 10px;
                     a{
                         border-radius: 50%;
@@ -73,19 +74,14 @@ nav{
                         text-shadow: none;
                         padding: 10px;
                         outline: none;
+                        transition: .3s;
                         &:hover{
-                            // border: none;
                             transform: scale(1.1);
                         }
                     }
                    }
                 }
             }
-            // &.rotateLinks{
-            //     display: flex;
-            //     flex-direction: column;
-
-            // }
         }
     }
 }
@@ -164,6 +160,10 @@ header{
                     color: rgb(115, 4, 4);
                     font-size: 7.5rem; 
                     text-shadow: black 1px 1px 5px;
+                    transition: 1s;
+                    &:hover{
+                        color: lightgray;
+                    }
                 }
             }
         }
@@ -326,6 +326,7 @@ section{
                         padding: 1rem;
                         box-shadow: inset $box-shadow;
                         border-radius: 10px;
+                        transition: .2s;
                         &:hover{
                             box-shadow: 1px 1px 1px 3px lightgray,
                                 0px 0px 10px 3px rgb(115, 4, 4);
@@ -348,6 +349,7 @@ section{
                             max-width: 350px;
                         }
                         @media screen and (width > 922px){
+                            transition: .2s;
                             &:hover{
                                 transform: scale(1.3);
                             }
@@ -495,6 +497,7 @@ footer#main-footer{
                     padding: .5rem;
                     background-color: lightgray;
                     color: $dark-base-text;
+                    transition: .2s;
                     &:focus{
                         background-color: lighten(lightgray, 10%);
                     }
@@ -518,6 +521,7 @@ footer#main-footer{
                 border: none;
                 box-shadow: inset $box-shadow;
                 border-radius: 3px;
+                transition: .2s;
                 font: {
                     variant: small-caps;
                     size: 1.25rem;
