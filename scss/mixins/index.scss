@@ -115,6 +115,8 @@
         size: .8rem;
     }
     p{
+        color: azure;
+        line-height: 1.5rem;
         &:first-letter{
             font-family: $bold-sans-serif;
             font-size: 200%;
