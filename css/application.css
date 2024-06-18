@@ -24,7 +24,6 @@ nav {
   z-index: 100;
 }
 nav ul {
-  display: none;
   list-style-type: none;
   width: 200px;
   display: flex;
@@ -33,12 +32,14 @@ nav ul {
   gap: 30px;
 }
 nav ul li {
-  visibility: hidden;
   margin: 0;
+}
+nav ul li:not(:first-child) {
+  visibility: hidden;
 }
 @media (min-width: 576px) {
   nav ul li {
-    visibility: visible;
+    visibility: visible !important;
   }
 }
 nav ul li a {
