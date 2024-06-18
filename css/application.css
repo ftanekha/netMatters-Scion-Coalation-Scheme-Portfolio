@@ -24,6 +24,7 @@ nav {
   z-index: 100;
 }
 nav ul {
+  display: none;
   list-style-type: none;
   width: 200px;
   display: flex;
@@ -32,7 +33,13 @@ nav ul {
   gap: 30px;
 }
 nav ul li {
+  visibility: hidden;
   margin: 0;
+}
+@media (min-width: 576px) {
+  nav ul li {
+    visibility: visible;
+  }
 }
 nav ul li a {
   display: block;
@@ -551,6 +558,15 @@ section#scion-coalition-scheme article p:first-letter {
   padding: 0;
   height: 5rem;
   color: #a40606;
+}
+section#scion-coalition-scheme article ul {
+  margin: 10px 0 0 0;
+  list-style-type: square;
+  list-style-position: inside;
+}
+section#scion-coalition-scheme article ul li {
+  color: azure;
+  line-height: 1.5rem;
 }
 section#scion-coalition-scheme article footer {
   padding: 1rem 0;

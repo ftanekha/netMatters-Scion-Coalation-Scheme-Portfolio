@@ -21,6 +21,7 @@ nav{
     left: 0;
     z-index: 100;
     ul{
+        display: none;
         list-style-type: none;
         width: 200px;
         display: flex;
@@ -28,6 +29,12 @@ nav{
         align-items: flex-start;
         gap: 30px;
         li{
+            //hide nav list on small screens
+            visibility: hidden;
+            @media (min-width: 576px){
+                visibility: visible;
+            }
+            //
             margin: 0;
             a{
                 display: block;

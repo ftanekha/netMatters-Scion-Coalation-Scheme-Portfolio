@@ -125,6 +125,15 @@
             color: lighten(rgb(115, 4, 4), 10%);
         }
     }
+    ul{
+        margin: 10px 0 0 0;
+        list-style-type: square;
+        list-style-position: inside;
+        li{
+            color: azure;
+            line-height: 1.5rem;
+        }
+    }
     footer{
         padding: 1rem 0;
         @include find-out-more-btn;

@@ -5,6 +5,10 @@ document.addEventListener(
         hamburgerMenuIcon.addEventListener(
             'click',
             ()=>{
+                //display man-nav link items if hidden
+                // const mainNav = document.querySelector('nav ul')
+                // if(mainNav.css('display') === 'hidden') mainNav.css('display') === 'block'
+
                 const sectionLink = document.querySelectorAll('.section-link')
                 const rotateLinks = document.querySelector('.rotateLinks')
                 sectionLink.forEach(
