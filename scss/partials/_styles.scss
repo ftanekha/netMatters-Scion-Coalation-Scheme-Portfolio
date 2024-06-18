@@ -30,10 +30,10 @@ nav{
         li{
             &:not(:first-child){
                 visibility: hidden;
-            }
-            //hide nav list on small screens
-            @media (min-width: 576px){
-                visibility: visible !important;
+                //hide nav list on small screens
+                @media (min-width: 576px){
+                    visibility: visible;
+                }
             }
             //
             margin: 0;

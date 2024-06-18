@@ -38,8 +38,8 @@ nav ul li:not(:first-child) {
   visibility: hidden;
 }
 @media (min-width: 576px) {
-  nav ul li {
-    visibility: visible !important;
+  nav ul li:not(:first-child) {
+    visibility: visible;
   }
 }
 nav ul li a {
