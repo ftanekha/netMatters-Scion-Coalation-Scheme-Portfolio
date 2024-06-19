@@ -199,10 +199,13 @@ section{
     margin: 3rem auto;
     background-color: black;
     &#about-me{
+        margin-top: -1rem;
+        padding: 0;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         @include section-heading;
+        h2{padding-top: 2rem;}
         article.about-me{
             flex: 1;
             *{
@@ -409,6 +412,7 @@ section{
         h2{
             margin-top: 1rem;
             margin-bottom: 5rem;
+            padding: 0;
         }
         //everything but span
         div#code-examples-main-container{
@@ -473,6 +477,8 @@ section{
         display: flex;
         flex-direction: column;
         height: 100vh;
+        margin: 0 auto;
+        padding-top: 0;
         @include section-heading;
         article{
             flex: 1;

@@ -12,6 +12,7 @@
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   /* apply border-box in all css rules */
   /* selon CSS3 specification,only double colon notation should be used for pseudo-elements */
