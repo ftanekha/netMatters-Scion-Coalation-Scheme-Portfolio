@@ -63,17 +63,24 @@ nav ul li a:hover {
   outline: none;
 }
 nav ul li a img {
-  max-width: 70px;
-  height: 70px;
+  max-width: 40px;
+  height: 80px;
   position: absolute;
   top: 0rem;
   left: 0;
   z-index: 10;
+  transition: 0.3s;
 }
 @media (min-width: 576px) {
   nav ul li a img {
-    max-width: 120px;
-    height: 120px;
+    max-width: 70px;
+    height: 100px;
+  }
+}
+@media (min-width: 992px) {
+  nav ul li a img {
+    max-width: 100px;
+    height: 200px;
   }
 }
 nav ul li:nth-child(2) {
@@ -193,7 +200,8 @@ section {
   background-color: black;
 }
 section#about-me {
-  margin-top: -1rem;
+  width: 70%;
+  margin-top: -1rem auto 0 auto;
   padding: 0;
   min-height: 100vh;
   display: flex;
